@@ -1,0 +1,19 @@
+intalar las dependencias
+composer install
+crear archivo .env y copiar lo de archico .env example
+crear bd
+crear key
+php artisan key:generate
+migrar bd
+php artisan migrate --seed
+iniciar serve
+php artisan serve
+
+instalar dependencias de boostrap
+npm install
+
+para hacer un crud
+php artisan make:crud nombre
+
+para hacer tabla 
+php artisan make:migrate nombre
