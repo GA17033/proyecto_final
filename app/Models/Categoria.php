@@ -10,10 +10,12 @@ use Illuminate\Database\Eloquent\Model;
  * @property $id
  * @property $nombre
  * @property $descripcion
+ * @property $imagen
+ * @property $activo
  * @property $created_at
  * @property $updated_at
  *
- * @property Producto $producto
+ * @property Producto[] $productos
  * @package App
  * @mixin \Illuminate\Database\Eloquent\Builder
  */
@@ -23,25 +25,26 @@ class Categoria extends Model
     static $rules = [
 		'nombre' => 'required',
 		'descripcion' => 'required',
+		'imagen' => 'required',
+		'activo' => 'required',
     ];
 
-    protected $perPage = 20;
+    protected $perPage = 10;
 
     /**
      * Attributes that should be mass-assignable.
      *
      * @var array
      */
-    protected $fillable = ['nombre','descripcion'];
+    protected $fillable = ['nombre','descripcion','imagen','activo'];
 
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function producto()
+    public function productos()
     {
-        return $this->hasOne('App\Models\Producto', 'id', 'id');
+        return $this->hasMany('App\Models\Producto', 'id_categorias', 'id');
     }
-    
 
 }

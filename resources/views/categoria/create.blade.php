@@ -10,15 +10,19 @@
             <div class="col-md-12">
 
                 @includeif('partials.errors')
-
+                <div class="float-right">
+                    <a class="btn btn-primary" href="{{ route('categorias.index') }}"> Regresar</a>
+                </div>
                 <div class="card card-default">
+
                     <div class="card-header">
-                        <span class="card-title">Create Categoria</span>
+                        <span class="card-title">Nueva Categoria</span>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('categorias.store') }}"  role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('categorias.store') }}" role="form"
+                            enctype="multipart/form-data">
                             @csrf
-
+                    {{ $btn=1}}
                             @include('categoria.form')
 
                         </form>

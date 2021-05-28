@@ -11,10 +11,10 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Show Categoria</span>
+                            <span class="card-title">Ver Categoria</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('categorias.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('categorias.index') }}"> Regresar</a>
                         </div>
                     </div>
 
@@ -27,6 +27,14 @@
                         <div class="form-group">
                             <strong>Descripcion:</strong>
                             {{ $categoria->descripcion }}
+                        </div>
+                        <div class="form-group">
+                            <strong>Imagen:</strong>
+                            {{ $categoria->imagen }}
+                        </div>
+                        <div class="form-group">
+                            <strong>Activo:</strong>
+                            {{ $categoria->activo }}
                         </div>
 
                     </div>

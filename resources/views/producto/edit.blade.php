@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    Update Categoria
+    Update Producto
 @endsection
 
 @section('content')
@@ -10,19 +10,17 @@
             <div class="col-md-12">
 
                 @includeif('partials.errors')
-                <div class="float-right">
-                    <a class="btn btn-primary" href="{{ route('categorias.index') }}"> Regresar</a>
-                </div>
+
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Editar Categoria</span>
+                        <span class="card-title">Update Producto</span>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('categorias.update', $categoria->id) }}"  role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('productos.update', $producto->id) }}"  role="form" enctype="multipart/form-data">
                             {{ method_field('PATCH') }}
                             @csrf
-                            {{ $btn=2}}
-                            @include('categoria.form')
+
+                            @include('producto.form')
 
                         </form>
                     </div>

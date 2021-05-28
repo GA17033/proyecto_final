@@ -14,11 +14,11 @@ class Categorias extends Migration
     public function up()
     {
         Schema::create('categorias', function (Blueprint $table) {
-            $table->increments('idCategoria')->unsigned()->index();
+            $table->increments('id')->unsigned();
             $table->string('nombre');
             $table->string('descripcion');
             $table->string('imagen');
-            $table->boolean('activa');
+            $table->boolean('activo');
             $table->timestamps();
         });
     }

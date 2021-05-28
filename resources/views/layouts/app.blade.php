@@ -21,7 +21,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -38,7 +38,6 @@
                     <ul class="navbar-nav mr-auto">
                         <a href="{{ route('categorias.index')}}" class="nav-link">{{ __('Categorias')}}</a>
                         <a href="{{ route('productos.index')}}" class="nav-link">{{ __('productos')}}</a>
-                        <a href="{{ route('clientes.index')}}" class="nav-link">{{ __('clientes')}}</a>
                         <a href="{{ route('proveedores.index')}}" class="nav-link">{{ __('proveedores')}}</a>
                     </ul>
 
