@@ -14,7 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('auth.login');
+    return view('home');
+    //return view('auth.login');
 });
 
 Auth::routes();
@@ -22,4 +23,5 @@ Auth::routes();
 Route::resource('categorias',App\Http\Controllers\CategoriaController::class)->middleware('auth');
 Route::resource('productos',App\Http\Controllers\ProductoController::class)->middleware('auth');
 Route::resource('proveedores',App\Http\Controllers\ProveedoreController::class)->middleware('auth');
+Route::get('home', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');
 
