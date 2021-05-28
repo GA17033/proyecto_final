@@ -52,7 +52,7 @@
 											<td>{{ $categoria->nombre }}</td>
 											<td>{{ $categoria->descripcion }}</td>
 											<td>{{ $categoria->imagen }}</td>
-											<td><button class="btn btn-sm btn-{{$categoria->activo==0 ? 'success' : 'danger'}}">{{ $categoria->activo==0 ? 'Activo' : 'Inactivo' }}</button></td>
+											<td><button class="btn btn-sm disabled btn-{{$categoria->activo==0 ? 'success' : 'danger'}}">{{ $categoria->activo==0 ? 'Activo' : 'Inactivo' }}</button></td>
 
                                             <td>
                                                 <form action="{{ route('categorias.destroy',$categoria->id) }}" method="POST">
