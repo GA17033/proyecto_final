@@ -79,8 +79,10 @@ class ProductoController extends Controller
     public function edit($id)
     {
         $producto = Producto::find($id);
+        $categorias = Categoria::all();
+        $categorias = json_decode($categorias);
 
-        return view('producto.edit', compact('producto'));
+        return view('producto.edit', compact('producto','categorias'));
     }
 
     /**

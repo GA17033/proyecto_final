@@ -22,7 +22,9 @@
                         <form method="POST" action="{{ route('categorias.store') }}" role="form"
                             enctype="multipart/form-data">
                             @csrf
-                    {{ $btn=1}}
+                            @php
+                                $btn = 1;
+                            @endphp
                             @include('categoria.form')
 
                         </form>

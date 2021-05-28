@@ -18,10 +18,13 @@
                         <span class="card-title">Editar Categoria</span>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('categorias.update', $categoria->id) }}"  role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('categorias.update', $categoria->id) }}" role="form"
+                            enctype="multipart/form-data">
                             {{ method_field('PATCH') }}
                             @csrf
-                            {{ $btn=2}}
+                            @php
+                                $btn = 2;
+                            @endphp
                             @include('categoria.form')
 
                         </form>

@@ -6,7 +6,7 @@
             <select id="id_categorias" name="id_categorias" class="form-control">    
             <option>------Seleccionar------</option>
                 @foreach ($categorias as $categoria)
-                    <option value="{{ $categoria->id }}">{{ $categoria->nombre }}</option>
+                    <option value="{{ $categoria->id }}"  {{$categoria->id==$producto->id_categorias ? 'selected' : ''}}>{{ $categoria->nombre }}</option>
                 @endforeach
             </select>
             {!! $errors->first('id_categorias', '<div class="invalid-feedback">:message</p>') !!}
@@ -44,6 +44,6 @@
 
     </div>
     <div class="box-footer mt20">
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-{{ $btn==1 ? 'success' : 'warning'}}">{{ $btn==1 ? 'Enviar' : 'Editar'}}</button>
     </div>
 </div>
