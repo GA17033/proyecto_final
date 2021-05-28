@@ -12,8 +12,9 @@ php artisan serve
 instalar dependencias de boostrap
 npm install
 
+para hacer tabla 
+php artisan make:migration nombre
+
 para hacer un crud
 php artisan make:crud nombre
 
-para hacer tabla 
-php artisan make:migrate nombre

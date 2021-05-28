@@ -37,6 +37,9 @@
 
                     <ul class="navbar-nav mr-auto">
                         <a href="{{ route('categorias.index')}}" class="nav-link">{{ __('Categorias')}}</a>
+                        <a href="{{ route('productos.index')}}" class="nav-link">{{ __('productos')}}</a>
+                        <a href="{{ route('clientes.index')}}" class="nav-link">{{ __('clientes')}}</a>
+                        <a href="{{ route('proveedores.index')}}" class="nav-link">{{ __('proveedores')}}</a>
                     </ul>
 
                     @endif
