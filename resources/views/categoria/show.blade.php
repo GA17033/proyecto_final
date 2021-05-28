@@ -34,7 +34,7 @@
                         </div>
                         <div class="form-group">
                             <strong>Activo:</strong>
-                            {{ $categoria->activo }}
+                            {{ $categoria->activo==0 ? 'Activo':'Inactivo' }}
                         </div>
 
                     </div>
