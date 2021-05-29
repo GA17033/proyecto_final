@@ -40,7 +40,7 @@
                         <a href="{{ route('productos.index')}}" class="nav-link">{{ __('Productos')}}</a>
                         <a href="{{ route('proveedores.index')}}" class="nav-link">{{ __('Proveedores')}}</a>
                         <a href="{{ route('pagos.index')}}" class="nav-link">{{ __('Pagos')}}</a>
-                        <!--<a href="{{ route('clientes.index')}}" class="nav-link">{{ __('Clientes')}}</a>-->
+                        <a href="{{ route('clientes.index')}}" class="nav-link">{{ __('Clientes')}}</a>
                         <!--<a href="{{ route('pedidos.index')}}" class="nav-link">{{ __('Pedidos')}}</a>-->
                     </ul>
 

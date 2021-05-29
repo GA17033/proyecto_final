@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    Proveedore
+    Cliente
 @endsection
 
 @section('content')
@@ -13,12 +13,12 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Proveedores') }}
+                                {{ __('Clientes') }}
                             </span>
 
                              <div class="float-right">
-                                <a href="{{ route('proveedores.create') }}" class="btn btn-success btn-sm float-right"  data-placement="left">
-                                  {{ __('Nuevo proveedor') }}
+                                <a href="{{ route('clientes.create') }}" class="btn btn-success btn-sm float-right"  data-placement="left">
+                                  {{ __('Nuevo Cliente') }}
                                 </a>
                               </div>
                         </div>
@@ -37,41 +37,39 @@
                                         <th>N°</th>
                                         
 										<th>Nombre</th>
+										<th>Apellido</th>
+										<th>Clase</th>
 										<th>Direccion</th>
-										<th>Ciudad</th>
-										<th>Codigo Postal</th>
+										<th>Estado</th>
+										<th>Pais</th>
 										<th>Telefono</th>
 										<th>Email</th>
-										<th>Metodos De Pagos</th>
-										<th>Tipo Descuento</th>
-										<th>Notas</th>
-										<th>Descuento Disponible</th>
-										<th>Pais</th>
+										<th>Password</th>
+										<th>Targeta Credito</th>
 
                                         <th>Acciones</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($proveedores as $proveedore)
+                                    @foreach ($clientes as $cliente)
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
-											<td>{{ $proveedore->nombre }}</td>
-											<td>{{ $proveedore->Direccion }}</td>
-											<td>{{ $proveedore->Ciudad }}</td>
-											<td>{{ $proveedore->Codigo_postal }}</td>
-											<td>{{ $proveedore->Telefono }}</td>
-											<td>{{ $proveedore->Email }}</td>
-											<td>{{ $proveedore->Metodos_de_pagos }}</td>
-											<td>{{ $proveedore->Tipo_descuento }}</td>
-											<td>{{ $proveedore->Notas }}</td>
-											<td>{{ $proveedore->Descuento_disponible }}</td>
-											<td>{{ $proveedore->Pais }}</td>
+											<td>{{ $cliente->Nombre }}</td>
+											<td>{{ $cliente->Apellido }}</td>
+											<td>{{ $cliente->Clase }}</td>
+											<td>{{ $cliente->Direccion }}</td>
+											<td>{{ $cliente->Estado }}</td>
+											<td>{{ $cliente->Pais }}</td>
+											<td>{{ $cliente->Telefono }}</td>
+											<td>{{ $cliente->Email }}</td>
+											<td>{{ $cliente->Password }}</td>
+											<td>{{ $cliente->Targeta_Credito }}</td>
 
                                             <td>
-                                                <form action="{{ route('proveedores.destroy',$proveedore->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('proveedores.show',$proveedore->id) }}"><i class="fa fa-fw fa-eye"></i> ver</a>
-                                                    <a class="btn btn-sm btn-warning" href="{{ route('proveedores.edit',$proveedore->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
+                                                <form action="{{ route('clientes.destroy',$cliente->id) }}" method="POST">
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('clientes.show',$cliente->id) }}"><i class="fa fa-fw fa-eye"></i> Ver</a>
+                                                    <a class="btn btn-sm btn-warning" href="{{ route('clientes.edit',$cliente->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Eliminar</button>
@@ -84,7 +82,7 @@
                         </div>
                     </div>
                 </div>
-                {!! $proveedores->links() !!}
+                {!! $clientes->links() !!}
             </div>
         </div>
     </div>

@@ -20,8 +20,8 @@
             {{ Form::label('Estado') }}
             <select id="activo" name="activo" class="form-control">    
                 <option>------Seleccionar------</option>
-                        <option value="0"  {{$categoria->activo==0 ? 'selected' : ''}}>Activo</option>
-                        <option value="1"  {{$categoria->activo==1 ? 'selected' : ''}}>Inactivo</option>
+                        <option value="1"  {{$categoria->activo==1 ? 'selected' : ''}}>Activo</option>
+                        <option value="0"  {{$categoria->activo==0 ? 'selected' : ''}}>Inactivo</option>
                 </select>
             {!! $errors->first('activo', '<div class="invalid-feedback">:message</p>') !!}
         </div>

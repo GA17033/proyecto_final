@@ -13,7 +13,7 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Pago') }}
+                                {{ __('Pagos') }}
                             </span>
 
                              <div class="float-right">
@@ -34,7 +34,7 @@
                             <table class="table table-striped table-hover">
                                 <thead class="thead">
                                     <tr>
-                                        <th>No</th>
+                                        <th>N°</th>
                                         
 										<th>Tipo De Pago</th>
 										<th>Permitido</th>

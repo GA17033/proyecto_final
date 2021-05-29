@@ -13,7 +13,7 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Categoria') }}
+                                {{ __('Categorias') }}
                             </span>
 
                              <div class="float-right">
@@ -52,7 +52,7 @@
 											<td>{{ $categoria->nombre }}</td>
 											<td>{{ $categoria->descripcion }}</td>
 											<td>{{ $categoria->imagen }}</td>
-											<td><button class="btn btn-sm disabled btn-{{$categoria->activo==0 ? 'success' : 'danger'}}">{{ $categoria->activo==0 ? 'Activo' : 'Inactivo' }}</button></td>
+											<td><button class="btn btn-sm disabled btn-{{$categoria->activo==1 ? 'success' : 'danger'}}">{{ $categoria->activo==1 ? 'Activo' : 'Inactivo' }}</button></td>
 
                                             <td>
                                                 <form action="{{ route('categorias.destroy',$categoria->id) }}" method="POST">
