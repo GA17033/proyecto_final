@@ -25,11 +25,10 @@ class Categoria extends Model
     static $rules = [
 		'nombre' => 'required',
 		'descripcion' => 'required',
-		'imagen' => 'required',
 		'activo' => 'required',
     ];
 
-    protected $perPage = 10;
+    protected $perPage = 5;
 
     /**
      * Attributes that should be mass-assignable.

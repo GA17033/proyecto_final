@@ -4,9 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Producto;
 use App\Models\Categoria;
-use Categorias;
+use App\Models\Proveedore;
 use Illuminate\Http\Request;
-use Illuminate\Support\Arr;
 
 /**
  * Class ProductoController
@@ -24,10 +23,10 @@ class ProductoController extends Controller
         $productos = Producto::paginate();
         $categorias = Categoria::all();
         $categorias = json_decode($categorias);
-
-        return view('producto.index', compact('productos','categorias'))
+        $proveedores = Proveedore::all();
+        $proveedores = json_decode($proveedores);
+        return view('producto.index', compact('productos','categorias','proveedores'))
             ->with('i', (request()->input('page', 1) - 1) * $productos->perPage());
-        
     }
 
     /**
@@ -39,8 +38,10 @@ class ProductoController extends Controller
     {
         $categorias = Categoria::all();
         $categorias = json_decode($categorias);
+        $proveedores = Proveedore::all();
+        $proveedores = json_decode($proveedores);
         $producto = new Producto();
-        return view('producto.create', compact('producto','categorias'));
+        return view('producto.create', compact('producto', 'categorias', 'proveedores'));
     }
 
     /**
@@ -53,7 +54,14 @@ class ProductoController extends Controller
     {
         request()->validate(Producto::$rules);
 
-        $producto = Producto::create($request->all());
+        $producto = Producto::all();
+        if ($request->hasFile('foto')) {
+            $producto['foto'] = $request->file('foto')->getClientOriginalName();
+            $request->file('foto')->storeAs('public/productos', $producto['foto']);
+            $producto = $request->all();
+            $producto['foto'] = $request->file('foto')->getClientOriginalName();
+        }
+        Producto::create($producto);
 
         return redirect()->route('productos.index')
             ->with('success', 'Producto creado con exito.');
@@ -68,8 +76,11 @@ class ProductoController extends Controller
     public function show($id)
     {
         $producto = Producto::find($id);
-
-        return view('producto.show', compact('producto'));
+        $categorias = Categoria::all();
+        $categorias = json_decode($categorias);
+        $proveedores = Proveedore::all();
+        $proveedores = json_decode($proveedores);
+        return view('producto.show', compact('producto', 'categorias', 'proveedores'));
     }
 
     /**
@@ -81,10 +92,13 @@ class ProductoController extends Controller
     public function edit($id)
     {
         $producto = Producto::find($id);
+
         $categorias = Categoria::all();
         $categorias = json_decode($categorias);
+        $proveedores = Proveedore::all();
+        $proveedores = json_decode($proveedores);
 
-        return view('producto.edit', compact('producto','categorias'));
+        return view('producto.edit', compact('producto', 'categorias', 'proveedores'));
     }
 
     /**
@@ -97,11 +111,25 @@ class ProductoController extends Controller
     public function update(Request $request, Producto $producto)
     {
         request()->validate(Producto::$rules);
-
-        $producto->update($request->all());
+        $imagen = Producto::find($producto->id);
+        $img = Producto::all();
+        if ($request->hasFile('foto')) {
+            $img['foto'] = $request->file('foto')->getClientOriginalName();
+            $request->file('foto')->storeAs('public/productos', $img['foto']);
+            $img = $request->all();
+            $img['foto'] = $request->file('foto')->getClientOriginalName();
+        
+        
+        unlink('storage/'.$imagen->foto);
+        $producto->update($img);
+    }else{
+        $img = $request->all();
+        $img['foto'] = $imagen->foto;
+        $producto->update($img);
+    }
 
         return redirect()->route('productos.index')
-            ->with('warning', 'Producto actualizado con exito');
+            ->with('success', 'Producto actualizado con exito.');
     }
 
     /**
@@ -111,9 +139,11 @@ class ProductoController extends Controller
      */
     public function destroy($id)
     {
+        $imagen = Producto::find($id);
+        unlink('storage/productos/'.$imagen->foto);
         $producto = Producto::find($id)->delete();
 
         return redirect()->route('productos.index')
-            ->with('danger', 'Producto eliminado con exito');
+            ->with('warning', 'Producto actualizado con exito');
     }
 }

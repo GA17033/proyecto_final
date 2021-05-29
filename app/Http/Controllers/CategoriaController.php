@@ -45,8 +45,14 @@ class CategoriaController extends Controller
     {
         request()->validate(Categoria::$rules);
 
-        $categoria = Categoria::create($request->all());
-
+        $categoria = Categoria::all();
+        if ($request->hasFile('imagen')) {
+            $categoria['imagen'] = $request->file('imagen')->getClientOriginalName();
+            $request->file('imagen')->storeAs('public/categorias', $categoria['imagen']);
+            $categoria = $request->all();
+            $categoria['imagen'] = $request->file('imagen')->getClientOriginalName();
+        }
+        Categoria::create($categoria);
         return redirect()->route('categorias.index')
             ->with('success', 'Categoria creada con exito.');
     }
@@ -87,9 +93,22 @@ class CategoriaController extends Controller
     public function update(Request $request, Categoria $categoria)
     {
         request()->validate(Categoria::$rules);
-
-        $categoria->update($request->all());
-
+        $imagen = Categoria::find($categoria->id);
+        $img = Categoria::all();
+        if ($request->hasFile('imagen')) {
+            $img['imagen'] = $request->file('imagen')->getClientOriginalName();
+            $request->file('imagen')->storeAs('public/categorias', $img['imagen']);
+            $img = $request->all();
+            $img['imagen'] = $request->file('imagen')->getClientOriginalName();
+        
+        
+        unlink('storage/categorias'.$imagen->imagen);
+        $categoria->update($img);
+    }else{
+        $img = $request->all();
+        $img['imagen'] = $imagen->imagen;
+        $categoria->update($img);
+    }
         return redirect()->route('categorias.index')
             ->with('warning', 'Categoria actualizada con exito.');
     }
@@ -101,6 +120,8 @@ class CategoriaController extends Controller
      */
     public function destroy($id)
     {
+        $imagen = Categoria::find($id);
+        unlink('storage/categorias/'.$imagen->imagen);
         $categoria = Categoria::find($id)->delete();
 
         return redirect()->route('categorias.index')

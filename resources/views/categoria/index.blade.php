@@ -51,8 +51,8 @@
                                             
 											<td>{{ $categoria->nombre }}</td>
 											<td>{{ $categoria->descripcion }}</td>
-											<td>{{ $categoria->imagen }}</td>
-											<td><button class="btn btn-sm disabled btn-{{$categoria->activo==1 ? 'success' : 'danger'}}">{{ $categoria->activo==1 ? 'Activo' : 'Inactivo' }}</button></td>
+											<td><img src="{{ asset('storage/categorias/').'/'. $categoria->imagen }}" alt="{{ $categoria->nombre }}" width="150"></td>
+											<td><button class="btn btn-sm disabled btn-{{$categoria->activo==0 ? 'success' : 'danger'}}">{{ $categoria->activo==0 ? 'Activo' : 'Inactivo' }}</button></td>
 
                                             <td>
                                                 <form action="{{ route('categorias.destroy',$categoria->id) }}" method="POST">

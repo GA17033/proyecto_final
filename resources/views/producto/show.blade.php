@@ -21,8 +21,24 @@
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>Id Categorias:</strong>
-                            {{ $producto->id_categorias }}
+                            <strong>Categoria:</strong>
+                            @php
+                            foreach ($categorias as $categoria) {
+                               if ($producto->id_categorias==$categoria->id) {
+                                    echo $categoria->nombre;
+                               }
+                            }
+                            @endphp
+                        </div>
+                        <div class="form-group">
+                            <strong>Proveedor:</strong>
+                            @php
+                            foreach ($proveedores as $proveedore) {
+                               if ($producto->id_proveedores==$proveedore->id) {
+                                    echo $proveedore->nombre;
+                               }
+                            }
+                            @endphp
                         </div>
                         <div class="form-group">
                             <strong>Nombre:</strong>
@@ -44,9 +60,11 @@
                             <strong>Ranking:</strong>
                             {{ $producto->ranking }}
                         </div>
-                        <div class="form-group">
-                            <strong>Foto:</strong>
-                            {{ $producto->foto }}
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <strong>Imagen:</strong>
+                                <img src="{{ asset('storage/productos').'/'. $producto->foto }}" alt="{{ $producto->nombre }}" width="450">
+                            </div>
                         </div>
 
                     </div>

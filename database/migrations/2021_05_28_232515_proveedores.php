@@ -14,17 +14,21 @@ class Proveedores extends Migration
     public function up()
     {
         Schema::create('proveedores', function (Blueprint $table) {
-            $table->increments('id')->unsigned();
+            $table->increments('id')->index()->unsigned();
+            $table->integer('id_pagos')->unsigned();
+            //para las relaciones
+
+            $table->foreign('id_pagos')->references('id')->on('pagos');
             $table->string('nombre',10);
             $table->string('Direccion',50);
             $table->string('Ciudad',50);
             $table->string('Codigo_postal',50);
-            $table->string('Telefono',50);
+            $table->integer('Telefono',50);
             $table->string('Email')->unique();
             $table->string('Metodos_de_pagos',50);
             $table->string('Tipo_descuento',50);
             $table->string('Notas',50);
-            $table->Decimal('Descuento_disponible',8,2);
+            $table->integer('Descuento_disponible',8,2);
             $table->string('Pais',50);
             $table->timestamps();
         });

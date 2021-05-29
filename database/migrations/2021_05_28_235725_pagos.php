@@ -16,7 +16,8 @@ class Pagos extends Migration
         Schema::create('pagos', function (Blueprint $table) {
             $table->increments('id')->unsigned();
             $table->string('tipo_de_pago');
-            $table->string('permitido');
+            $table->string('descripcion');
+            $table->integer('estado');
             $table->timestamps();
         });
     }

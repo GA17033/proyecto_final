@@ -16,9 +16,13 @@ class Productos extends Migration
         //
         Schema::create('productos', function (Blueprint $table) {
             $table->increments('id')->unsigned();
+            
             $table->integer('id_categorias')->unsigned();
+            $table->integer('id_proveedores')->unsigned();
             //para las relaciones
-            $table->foreign('id_categorias')->references("id")->on("categorias");
+
+            $table->foreign('id_proveedores')->references('id')->on('proveedores');
+            $table->foreign('id_categorias')->references('id')->on('categorias');
             $table->string('nombre');
             $table->string('descripcion');
             $table->integer('precio');

@@ -18,3 +18,10 @@ php artisan make:migration nombre
 para hacer un crud
 php artisan make:crud nombre
 
+Nuevos pasos para base de datos
+ mover migracion de productos para otra carpeta para q no s haga y la haremos despues
+ php artisan migrate luego mueven de regreso la migracion y otra vez
+ php artisan migrate
+
+activar storage para ver img
+php artisan storage:link

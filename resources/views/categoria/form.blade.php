@@ -13,15 +13,15 @@
         </div>
         <div class="form-group">
             {{ Form::label('imagen') }}
-            {{ Form::text('imagen', $categoria->imagen, ['class' => 'form-control' . ($errors->has('imagen') ? ' is-invalid' : ''), 'placeholder' => 'Imagen']) }}
+            <input type="file" name="imagen" id="imagen" class="form-control">
             {!! $errors->first('imagen', '<div class="invalid-feedback">:message</p>') !!}
         </div>
         <div class="form-group">
             {{ Form::label('Estado') }}
             <select id="activo" name="activo" class="form-control">    
                 <option>------Seleccionar------</option>
-                        <option value="1"  {{$categoria->activo==1 ? 'selected' : ''}}>Activo</option>
-                        <option value="0"  {{$categoria->activo==0 ? 'selected' : ''}}>Inactivo</option>
+                        <option value="0"  {{$categoria->activo==0 ? 'selected' : ''}}>Activo</option>
+                        <option value="1"  {{$categoria->activo==1 ? 'selected' : ''}}>Inactivo</option>
                 </select>
             {!! $errors->first('activo', '<div class="invalid-feedback">:message</p>') !!}
         </div>

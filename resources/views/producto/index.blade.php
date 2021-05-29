@@ -16,12 +16,11 @@
                                 {{ __('Productos') }}
                             </span>
 
-                            <div class="float-right">
-                                <a href="{{ route('productos.create') }}" class="btn btn-success btn-sm float-right"
-                                    data-placement="left">
-                                    {{ __('Nuevo Producto') }}
+                             <div class="float-right">
+                                <a href="{{ route('productos.create') }}" class="btn btn-success btn-sm float-right"  data-placement="left">
+                                  {{ __('Nuevo Producto') }}
                                 </a>
-                            </div>
+                              </div>
                         </div>
                     </div>
                     @if ($message = Session::get('success'))
@@ -32,18 +31,19 @@
 
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table table-striped table-hover text-center">
+                            <table class="table table-striped table-hover">
                                 <thead class="thead">
                                     <tr>
                                         <th>N°</th>
-
-                                        <th>Categorias</th>
-                                        <th>Nombre</th>
-                                        <th>Descripcion</th>
-                                        <th>Precio</th>
-                                        <th>Cantidad</th>
-                                        <th>Ranking</th>
-                                        <th>Foto</th>
+                                        
+										<th>Categoria</th>
+										<th>Proveedor</th>
+										<th>Nombre</th>
+										<th>Descripcion</th>
+										<th>Precio</th>
+										<th>Cantidad</th>
+										<th>Ranking</th>
+										<th>Foto</th>
 
                                         <th>Acciones</th>
                                     </tr>
@@ -52,19 +52,27 @@
                                     @foreach ($productos as $producto)
                                         <tr>
                                             <td>{{ ++$i }}</td>
-                                            <td>@foreach ($categorias as $categoria)
+                                            
+											<td>@foreach ($categorias as $categoria)
                                                 @php
                                                     if ($producto->id_categorias==$categoria->id) {
                                                     echo $categoria->nombre;
                                                 }
                                                 @endphp
                                             @endforeach</td>
-                                            <td>{{ $producto->nombre }}</td>
-                                            <td>{{ $producto->descripcion }}</td>
-                                            <td>{{ $producto->precio }}</td>
-                                            <td>{{ $producto->cantidad }}</td>
-                                            <td>{{ $producto->ranking }}</td>
-                                            <td>{{ $producto->foto }}</td>
+											<td>@foreach ($proveedores as $proveedore)
+                                                @php
+                                                    if ($producto->id_proveedores==$proveedore->id) {
+                                                    echo $proveedore->nombre;
+                                                }
+                                                @endphp
+                                            @endforeach</td>
+											<td>{{ $producto->nombre }}</td>
+											<td>{{ $producto->descripcion }}</td>
+											<td>{{ $producto->precio }}</td>
+											<td>{{ $producto->cantidad }}</td>
+											<td>{{ $producto->ranking }}</td>
+											<td><img src="{{ asset('storage/productos').'/'. $producto->foto }}" alt="{{ $producto->nombre }}" width="150"></td>
 
                                             <td>
                                                 <form action="{{ route('productos.destroy', $producto->id) }}"
