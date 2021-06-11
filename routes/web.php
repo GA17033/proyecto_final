@@ -27,4 +27,4 @@ Route::resource('pagos',App\Http\Controllers\PagoController::class)->middleware(
 Route::resource('clientes',App\Http\Controllers\ClienteController::class)->middleware('auth');
 Route::resource('pedidos',App\Http\Controllers\PedidoController::class)->middleware('auth');
 Route::get('home', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');
-
+Route::apiResource('v1/posts', App\Http\Controllers\Api\V1\PostController::class)->middleware('api');
