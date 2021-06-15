@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-05-2021 a las 21:21:33
+-- Tiempo de generación: 16-06-2021 a las 00:09:39
 -- Versión del servidor: 10.4.17-MariaDB
 -- Versión de PHP: 8.0.2
 
@@ -37,13 +37,6 @@ CREATE TABLE `categorias` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Volcado de datos para la tabla `categorias`
---
-
-INSERT INTO `categorias` (`id`, `nombre`, `descripcion`, `imagen`, `activo`, `created_at`, `updated_at`) VALUES
-(2, 'Perifericos Gaming', 'perifericos de alto rendimiento para el gaming', 'best-gaming-mouse-2020.jpg', 0, '2021-05-29 11:00:29', '2021-05-29 23:59:38');
-
 -- --------------------------------------------------------
 
 --
@@ -65,13 +58,6 @@ CREATE TABLE `clientes` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Volcado de datos para la tabla `clientes`
---
-
-INSERT INTO `clientes` (`id`, `Nombre`, `Apellido`, `Clase`, `Direccion`, `Estado`, `Pais`, `Telefono`, `Email`, `Password`, `Targeta_Credito`, `created_at`, `updated_at`) VALUES
-(1, 'Juan', 'perez', 'Empresarial', 'casa', 'nose', 'SV', '324324', 'juanito@gmail.com', '12345', '123445657-8', '2021-05-30 01:19:22', '2021-05-30 01:19:22');
 
 -- --------------------------------------------------------
 
@@ -101,20 +87,6 @@ CREATE TABLE `migrations` (
   `batch` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Volcado de datos para la tabla `migrations`
---
-
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(1, '2014_10_12_000000_create_users_table', 1),
-(2, '2014_10_12_100000_create_password_resets_table', 1),
-(3, '2019_08_19_000000_create_failed_jobs_table', 1),
-(4, '2021_05_27_004825_categorias', 1),
-(5, '2021_05_28_232515_proveedores', 1),
-(6, '2021_05_28_235725_pagos', 1),
-(7, '2021_05_29_000705_clientes', 1),
-(8, '2021_05_27_040302_productos', 2);
-
 -- --------------------------------------------------------
 
 --
@@ -128,15 +100,6 @@ CREATE TABLE `pagos` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Volcado de datos para la tabla `pagos`
---
-
-INSERT INTO `pagos` (`id`, `tipo_de_pago`, `permitido`, `created_at`, `updated_at`) VALUES
-(1, 'Tarjeta de Credito', 'Permitido', '2021-05-30 01:18:31', '2021-05-30 01:18:31'),
-(2, 'Efectivo', 'Permitido', '2021-05-30 01:18:36', '2021-05-30 01:18:36'),
-(3, 'Paypal', 'Permitido', '2021-05-30 01:18:44', '2021-05-30 01:18:44');
 
 -- --------------------------------------------------------
 
@@ -170,13 +133,6 @@ CREATE TABLE `productos` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Volcado de datos para la tabla `productos`
---
-
-INSERT INTO `productos` (`id`, `id_categorias`, `id_proveedores`, `nombre`, `descripcion`, `precio`, `cantidad`, `ranking`, `foto`, `created_at`, `updated_at`) VALUES
-(4, 2, 4, 'Telefono', 'smarfhone', 900, 10, 2, 'sage.jpg', '2021-05-30 01:20:14', '2021-05-30 01:20:14');
-
 -- --------------------------------------------------------
 
 --
@@ -200,14 +156,6 @@ CREATE TABLE `proveedores` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Volcado de datos para la tabla `proveedores`
---
-
-INSERT INTO `proveedores` (`id`, `nombre`, `Direccion`, `Ciudad`, `Codigo_postal`, `Telefono`, `Email`, `Metodos_de_pagos`, `Tipo_descuento`, `Notas`, `Descuento_disponible`, `Pais`, `created_at`, `updated_at`) VALUES
-(1, 'Razer', 'nose', 'nose', '1', '1', 'nose', '1', 'ninguno', '1', '0.00', 'nose', '2021-05-29 11:30:02', '2021-05-29 11:30:02'),
-(4, 'Samsung', 'Korea', 'korea', '12321', '121312', 'ko@gmail', 'Tarjeta de Credito', 'ninguno', 'Buen proveedor', '0.00', 'koreea', '2021-05-30 01:18:22', '2021-05-30 01:18:22');
-
 -- --------------------------------------------------------
 
 --
@@ -224,13 +172,6 @@ CREATE TABLE `users` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Volcado de datos para la tabla `users`
---
-
-INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'José Mario Diaz', 'josemario833@gmail.com', NULL, '$2y$10$LTSpggrWfmhzDIGKvsNk/Om6WAxQnoUb7S6dMJbqsHmLTF3r7GiXi', NULL, '2021-05-29 10:56:42', '2021-05-29 10:56:42');
 
 --
 -- Índices para tablas volcadas
@@ -306,13 +247,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `categorias`
 --
 ALTER TABLE `categorias`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `failed_jobs`
@@ -324,31 +265,31 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT de la tabla `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `pagos`
 --
 ALTER TABLE `pagos`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `proveedores`
 --
 ALTER TABLE `proveedores`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- Restricciones para tablas volcadas
