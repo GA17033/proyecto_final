@@ -13,10 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-    //return view('auth.login');
-});
 
 Auth::routes();
 
@@ -26,6 +22,7 @@ Route::resource('proveedores',App\Http\Controllers\ProveedoreController::class)-
 Route::resource('pagos',App\Http\Controllers\PagoController::class)->middleware('auth');
 Route::resource('clientes',App\Http\Controllers\ClienteController::class)->middleware('auth');
 Route::resource('pedidos',App\Http\Controllers\PedidoController::class)->middleware('auth');
-Route::get('home', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');
+
 Route::apiResource('v1/posts', App\Http\Controllers\Api\V1\PostController::class)->middleware('api');
 //para acceder a la api http://localhost/proyecto_final/public/v1/posts
