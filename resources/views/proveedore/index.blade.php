@@ -5,6 +5,24 @@
 @endsection
 
 @section('content')
+    @if ($message = Session::get('success'))
+        @php
+            $color = Session::get('color');
+        @endphp
+        <div class="alert alert-{{ $color }} border border-{{ $color }} alert-dismissible fade show "
+            style="position: absolute; top: 5px; right: 0;">
+            <p>{{ $message }}</p>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    @endif
+    <script>
+        window.setTimeout(function() {
+            $(".alert").alert('close');
+        }, 3000);
+
+    </script>
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12">
@@ -16,18 +34,14 @@
                                 {{ __('Proveedores') }}
                             </span>
 
-                             <div class="float-right">
-                                <a href="{{ route('proveedores.create') }}" class="btn btn-success btn-sm float-right"  data-placement="left">
-                                  {{ __('Nuevo proveedor') }}
+                            <div class="float-right">
+                                <a href="{{ route('proveedores.create') }}" class="btn btn-success btn-sm float-right"
+                                    data-placement="left">
+                                    {{ __('Nuevo proveedor') }}
                                 </a>
-                              </div>
+                            </div>
                         </div>
                     </div>
-                    @if ($message = Session::get('success'))
-                        <div class="alert alert-success">
-                            <p>{{ $message }}</p>
-                        </div>
-                    @endif
 
                     <div class="card-body">
                         <div class="table-responsive">
@@ -35,18 +49,18 @@
                                 <thead class="thead">
                                     <tr>
                                         <th>N°</th>
-                                        
-										<th>Nombre</th>
-										<th>Direccion</th>
-										<th>Ciudad</th>
-										<th>Codigo Postal</th>
-										<th>Telefono</th>
-										<th>Email</th>
-										<th>Metodos De Pagos</th>
-										<th>Tipo Descuento</th>
-										<th>Notas</th>
-										<th>Descuento Disponible</th>
-										<th>Pais</th>
+
+                                        <th>Nombre</th>
+                                        <th>Direccion</th>
+                                        <th>Ciudad</th>
+                                        <th>Codigo Postal</th>
+                                        <th>Telefono</th>
+                                        <th>Email</th>
+                                        <th>Metodos De Pagos</th>
+                                        <th>Tipo Descuento</th>
+                                        <th>Notas</th>
+                                        <th>Descuento Disponible</th>
+                                        <th>Pais</th>
 
                                         <th>Acciones</th>
                                     </tr>
@@ -55,26 +69,32 @@
                                     @foreach ($proveedores as $proveedore)
                                         <tr>
                                             <td>{{ ++$i }}</td>
-                                            
-											<td>{{ $proveedore->nombre }}</td>
-											<td>{{ $proveedore->Direccion }}</td>
-											<td>{{ $proveedore->Ciudad }}</td>
-											<td>{{ $proveedore->Codigo_postal }}</td>
-											<td>{{ $proveedore->Telefono }}</td>
-											<td>{{ $proveedore->Email }}</td>
-											<td>{{ $proveedore->Metodos_de_pagos }}</td>
-											<td>{{ $proveedore->Tipo_descuento }}</td>
-											<td>{{ $proveedore->Notas }}</td>
-											<td>{{ $proveedore->Descuento_disponible }}</td>
-											<td>{{ $proveedore->Pais }}</td>
+
+                                            <td>{{ $proveedore->nombre }}</td>
+                                            <td>{{ $proveedore->Direccion }}</td>
+                                            <td>{{ $proveedore->Ciudad }}</td>
+                                            <td>{{ $proveedore->Codigo_postal }}</td>
+                                            <td>{{ $proveedore->Telefono }}</td>
+                                            <td>{{ $proveedore->Email }}</td>
+                                            <td>{{ $proveedore->Metodos_de_pagos }}</td>
+                                            <td>{{ $proveedore->Tipo_descuento }}</td>
+                                            <td>{{ $proveedore->Notas }}</td>
+                                            <td>{{ $proveedore->Descuento_disponible }}</td>
+                                            <td>{{ $proveedore->Pais }}</td>
 
                                             <td>
-                                                <form action="{{ route('proveedores.destroy',$proveedore->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('proveedores.show',$proveedore->id) }}"><i class="fa fa-fw fa-eye"></i> ver</a>
-                                                    <a class="btn btn-sm btn-warning" href="{{ route('proveedores.edit',$proveedore->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
+                                                <form action="{{ route('proveedores.destroy', $proveedore->id) }}"
+                                                    method="POST">
+                                                    <a class="btn btn-sm btn-primary "
+                                                        href="{{ route('proveedores.show', $proveedore->id) }}"><i
+                                                            class="fa fa-fw fa-eye"></i> ver</a>
+                                                    <a class="btn btn-sm btn-warning"
+                                                        href="{{ route('proveedores.edit', $proveedore->id) }}"><i
+                                                            class="fa fa-fw fa-edit"></i> Editar</a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Eliminar</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm"><i
+                                                            class="fa fa-fw fa-trash"></i> Eliminar</button>
                                                 </form>
                                             </td>
                                         </tr>

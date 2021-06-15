@@ -64,7 +64,8 @@ class ProductoController extends Controller
         Producto::create($producto);
 
         return redirect()->route('productos.index')
-            ->with('success', 'Producto creado con exito.');
+            ->with('success', 'Producto creado con exito')
+            ->with('color', 'success');
     }
 
     /**
@@ -120,7 +121,7 @@ class ProductoController extends Controller
             $img['foto'] = $request->file('foto')->getClientOriginalName();
         
         
-        unlink('storage/'.$imagen->foto);
+        unlink('storage/productos/'.$imagen->foto);
         $producto->update($img);
     }else{
         $img = $request->all();
@@ -129,7 +130,8 @@ class ProductoController extends Controller
     }
 
         return redirect()->route('productos.index')
-            ->with('success', 'Producto actualizado con exito.');
+            ->with('success', 'Producto actualizado con exito')
+            ->with('color', 'warning');
     }
 
     /**
@@ -144,6 +146,7 @@ class ProductoController extends Controller
         $producto = Producto::find($id)->delete();
 
         return redirect()->route('productos.index')
-            ->with('warning', 'Producto actualizado con exito');
+            ->with('warning', 'Producto eliminado con exito')
+            ->with('color', 'danger');
     }
 }

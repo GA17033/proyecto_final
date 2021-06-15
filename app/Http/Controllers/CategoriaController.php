@@ -54,7 +54,8 @@ class CategoriaController extends Controller
         }
         Categoria::create($categoria);
         return redirect()->route('categorias.index')
-            ->with('success', 'Categoria creada con exito.');
+            ->with('success', 'Categoria creada con exito.')
+            ->with('color', 'success');
     }
 
     /**
@@ -102,7 +103,7 @@ class CategoriaController extends Controller
             $img['imagen'] = $request->file('imagen')->getClientOriginalName();
         
         
-        unlink('storage/categorias'.$imagen->imagen);
+        unlink('storage/categorias/'.$imagen->imagen);
         $categoria->update($img);
     }else{
         $img = $request->all();
@@ -110,7 +111,8 @@ class CategoriaController extends Controller
         $categoria->update($img);
     }
         return redirect()->route('categorias.index')
-            ->with('warning', 'Categoria actualizada con exito.');
+            ->with('success', 'Categoria actualizada con exito.')
+            ->with('color', 'warning');
     }
 
     /**
@@ -125,6 +127,7 @@ class CategoriaController extends Controller
         $categoria = Categoria::find($id)->delete();
 
         return redirect()->route('categorias.index')
-            ->with('danger', 'Categoria eliminada con exito.');
+            ->with('success', 'Categoria eliminada con exito.')
+            ->with('color', 'danger');
     }
 }

@@ -5,7 +5,26 @@
 @endsection
 
 @section('content')
+    @if ($message = Session::get('success'))
+        @php
+            $color = Session::get('color');
+        @endphp
+        <div class="alert alert-{{ $color }} border border-{{ $color }} alert-dismissible fade show "
+            style="position: absolute; top: 5px; right: 0;">
+            <p>{{ $message }}</p>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    @endif
+    <script>
+        window.setTimeout(function() {
+            $(".alert").alert('close');
+        }, 3000);
+
+    </script>
     <div class="container-fluid">
+
         <div class="row">
             <div class="col-sm-12">
                 <div class="card">
@@ -16,18 +35,14 @@
                                 {{ __('Categorias') }}
                             </span>
 
-                             <div class="float-right">
-                                <a href="{{ route('categorias.create') }}" class="btn btn-success btn-sm float-right"  data-placement="left">
-                                  {{ __('Nueva Categoria') }}
+                            <div class="float-right">
+                                <a href="{{ route('categorias.create') }}" class="btn btn-success btn-sm float-right"
+                                    data-placement="left">
+                                    {{ __('Nueva Categoria') }}
                                 </a>
-                              </div>
+                            </div>
                         </div>
                     </div>
-                    @if ($message = Session::get('success'))
-                        <div class="alert alert-success">
-                            <p>{{ $message }}</p>
-                        </div>
-                    @endif
 
                     <div class="card-body">
                         <div class="table-responsive">
@@ -35,11 +50,11 @@
                                 <thead class="thead">
                                     <tr>
                                         <th>N°</th>
-                                        
-										<th>Nombre</th>
-										<th>Descripcion</th>
-										<th>Imagen</th>
-										<th>Activo</th>
+
+                                        <th>Nombre</th>
+                                        <th>Descripcion</th>
+                                        <th>Imagen</th>
+                                        <th>Activo</th>
 
                                         <th>Acciones</th>
                                     </tr>
@@ -48,19 +63,28 @@
                                     @foreach ($categorias as $categoria)
                                         <tr>
                                             <td>{{ ++$i }}</td>
-                                            
-											<td>{{ $categoria->nombre }}</td>
-											<td>{{ $categoria->descripcion }}</td>
-											<td><img src="{{ asset('storage/categorias/').'/'. $categoria->imagen }}" alt="{{ $categoria->nombre }}" width="150"></td>
-											<td><button class="btn btn-sm disabled btn-{{$categoria->activo==0 ? 'success' : 'danger'}}">{{ $categoria->activo==0 ? 'Activo' : 'Inactivo' }}</button></td>
+
+                                            <td>{{ $categoria->nombre }}</td>
+                                            <td>{{ $categoria->descripcion }}</td>
+                                            <td><img src="{{ asset('storage/categorias/') . '/' . $categoria->imagen }}"
+                                                    alt="{{ $categoria->nombre }}" width="150"></td>
+                                            <td><button
+                                                    class="btn btn-sm disabled btn-{{ $categoria->activo == 0 ? 'success' : 'danger' }}">{{ $categoria->activo == 0 ? 'Activo' : 'Inactivo' }}</button>
+                                            </td>
 
                                             <td>
-                                                <form action="{{ route('categorias.destroy',$categoria->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('categorias.show',$categoria->id) }}"><i class="fa fa-fw fa-eye"></i> Ver</a>
-                                                    <a class="btn btn-sm btn-warning" href="{{ route('categorias.edit',$categoria->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
+                                                <form action="{{ route('categorias.destroy', $categoria->id) }}"
+                                                    method="POST">
+                                                    <a class="btn btn-sm btn-primary "
+                                                        href="{{ route('categorias.show', $categoria->id) }}"><i
+                                                            class="fa fa-fw fa-eye"></i> Ver</a>
+                                                    <a class="btn btn-sm btn-warning"
+                                                        href="{{ route('categorias.edit', $categoria->id) }}"><i
+                                                            class="fa fa-fw fa-edit"></i> Editar</a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Eliminar</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm"><i
+                                                            class="fa fa-fw fa-trash"></i> Eliminar</button>
                                                 </form>
                                             </td>
                                         </tr>

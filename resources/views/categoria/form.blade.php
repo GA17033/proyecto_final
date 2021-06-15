@@ -13,7 +13,7 @@
         </div>
         <div class="form-group">
             {{ Form::label('imagen') }}
-            <input type="file" name="imagen" id="imagen" class="form-control">
+            <input type="file" name="imagen" id="imagen" class="form-control" {{ $btn==1 ? 'required' : ''}} value="{{ old('imagen') }}">
             {!! $errors->first('imagen', '<div class="invalid-feedback">:message</p>') !!}
         </div>
         <div class="form-group">
