@@ -48,7 +48,8 @@ class PagoController extends Controller
         $pago = Pago::create($request->all());
 
         return redirect()->route('pagos.index')
-            ->with('success', 'Pago created successfully.');
+            ->with('success', 'Pago creado con exito')
+            ->with('color', 'warning');
     }
 
     /**
@@ -91,7 +92,8 @@ class PagoController extends Controller
         $pago->update($request->all());
 
         return redirect()->route('pagos.index')
-            ->with('success', 'Pago updated successfully');
+            ->with('success', 'Pago actualizado con exito')
+            ->with('color', 'warning');
     }
 
     /**
@@ -104,6 +106,7 @@ class PagoController extends Controller
         $pago = Pago::find($id)->delete();
 
         return redirect()->route('pagos.index')
-            ->with('success', 'Pago deleted successfully');
+            ->with('success', 'Pago eliminado con exito')
+            ->with('color', 'danger');
     }
 }

@@ -5,6 +5,24 @@
 @endsection
 
 @section('content')
+    @if ($message = Session::get('success'))
+        @php
+            $color = Session::get('color');
+        @endphp
+        <div class="alert alert-{{ $color }} border border-{{ $color }} alert-dismissible fade show "
+            style="position: absolute; top: 5px; right: 0;">
+            <p>{{ $message }}</p>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    @endif
+    <script>
+        window.setTimeout(function() {
+            $(".alert").alert('close');
+        }, 3000);
+
+    </script>
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12">
@@ -16,18 +34,14 @@
                                 {{ __('Productos') }}
                             </span>
 
-                             <div class="float-right">
-                                <a href="{{ route('productos.create') }}" class="btn btn-success btn-sm float-right"  data-placement="left">
-                                  {{ __('Nuevo Producto') }}
+                            <div class="float-right">
+                                <a href="{{ route('productos.create') }}" class="btn btn-success btn-sm float-right"
+                                    data-placement="left">
+                                    {{ __('Nuevo Producto') }}
                                 </a>
-                              </div>
+                            </div>
                         </div>
                     </div>
-                    @if ($message = Session::get('success'))
-                        <div class="alert alert-success">
-                            <p>{{ $message }}</p>
-                        </div>
-                    @endif
 
                     <div class="card-body">
                         <div class="table-responsive">
@@ -35,15 +49,15 @@
                                 <thead class="thead">
                                     <tr>
                                         <th>N°</th>
-                                        
-										<th>Categoria</th>
-										<th>Proveedor</th>
-										<th>Nombre</th>
-										<th>Descripcion</th>
-										<th>Precio</th>
-										<th>Cantidad</th>
-										<th>Ranking</th>
-										<th>Foto</th>
+
+                                        <th>Categoria</th>
+                                        <th>Proveedor</th>
+                                        <th>Nombre</th>
+                                        <th>Descripcion</th>
+                                        <th>Precio</th>
+                                        <th>Cantidad</th>
+                                        <th>Ranking</th>
+                                        <th>Foto</th>
 
                                         <th>Acciones</th>
                                     </tr>
@@ -52,27 +66,32 @@
                                     @foreach ($productos as $producto)
                                         <tr>
                                             <td>{{ ++$i }}</td>
-                                            
-											<td>@foreach ($categorias as $categoria)
-                                                @php
-                                                    if ($producto->id_categorias==$categoria->id) {
-                                                    echo $categoria->nombre;
-                                                }
-                                                @endphp
-                                            @endforeach</td>
-											<td>@foreach ($proveedores as $proveedore)
-                                                @php
-                                                    if ($producto->id_proveedores==$proveedore->id) {
-                                                    echo $proveedore->nombre;
-                                                }
-                                                @endphp
-                                            @endforeach</td>
-											<td>{{ $producto->nombre }}</td>
-											<td>{{ $producto->descripcion }}</td>
-											<td>{{ $producto->precio }}</td>
-											<td>{{ $producto->cantidad }}</td>
-											<td>{{ $producto->ranking }}</td>
-											<td><img src="{{ asset('storage/productos').'/'. $producto->foto }}" alt="{{ $producto->nombre }}" width="150"></td>
+
+                                            <td>
+                                                @foreach ($categorias as $categoria)
+                                                    @php
+                                                        if ($producto->id_categorias == $categoria->id) {
+                                                            echo $categoria->nombre;
+                                                        }
+                                                    @endphp
+                                                @endforeach
+                                            </td>
+                                            <td>
+                                                @foreach ($proveedores as $proveedore)
+                                                    @php
+                                                        if ($producto->id_proveedores == $proveedore->id) {
+                                                            echo $proveedore->nombre;
+                                                        }
+                                                    @endphp
+                                                @endforeach
+                                            </td>
+                                            <td>{{ $producto->nombre }}</td>
+                                            <td>{{ $producto->descripcion }}</td>
+                                            <td>{{ $producto->precio }}</td>
+                                            <td>{{ $producto->cantidad }}</td>
+                                            <td>{{ $producto->ranking }}</td>
+                                            <td><img src="{{ asset('storage/productos') . '/' . $producto->foto }}"
+                                                    alt="{{ $producto->nombre }}" width="150"></td>
 
                                             <td>
                                                 <form action="{{ route('productos.destroy', $producto->id) }}"

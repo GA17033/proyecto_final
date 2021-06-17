@@ -48,13 +48,14 @@ class CategoriaController extends Controller
         $categoria = Categoria::all();
         if ($request->hasFile('imagen')) {
             $categoria['imagen'] = $request->file('imagen')->getClientOriginalName();
-            $request->file('imagen')->storeAs('public/categorias', $categoria['imagen']);
+            $request->file('imagen')->storeAs('public/categorias/', $categoria['imagen']);
             $categoria = $request->all();
             $categoria['imagen'] = $request->file('imagen')->getClientOriginalName();
         }
         Categoria::create($categoria);
         return redirect()->route('categorias.index')
-            ->with('success', 'Categoria creada con exito.');
+            ->with('success', 'Categoria creada con exito.')
+            ->with('color', 'success');
     }
 
     /**
@@ -97,12 +98,12 @@ class CategoriaController extends Controller
         $img = Categoria::all();
         if ($request->hasFile('imagen')) {
             $img['imagen'] = $request->file('imagen')->getClientOriginalName();
-            $request->file('imagen')->storeAs('public/categorias', $img['imagen']);
+            $request->file('imagen')->storeAs('public/categorias/', $img['imagen']);
             $img = $request->all();
             $img['imagen'] = $request->file('imagen')->getClientOriginalName();
         
         
-        unlink('storage/categorias'.$imagen->imagen);
+        unlink('storage/categorias/'.$imagen->imagen);
         $categoria->update($img);
     }else{
         $img = $request->all();
@@ -110,7 +111,8 @@ class CategoriaController extends Controller
         $categoria->update($img);
     }
         return redirect()->route('categorias.index')
-            ->with('warning', 'Categoria actualizada con exito.');
+            ->with('success', 'Categoria actualizada con exito.')
+            ->with('color', 'warning');
     }
 
     /**
@@ -125,6 +127,7 @@ class CategoriaController extends Controller
         $categoria = Categoria::find($id)->delete();
 
         return redirect()->route('categorias.index')
-            ->with('danger', 'Categoria eliminada con exito.');
+            ->with('success', 'Categoria eliminada con exito.')
+            ->with('color', 'danger');
     }
 }
