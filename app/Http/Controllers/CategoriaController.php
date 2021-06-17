@@ -48,7 +48,7 @@ class CategoriaController extends Controller
         $categoria = Categoria::all();
         if ($request->hasFile('imagen')) {
             $categoria['imagen'] = $request->file('imagen')->getClientOriginalName();
-            $request->file('imagen')->storeAs('public/categorias', $categoria['imagen']);
+            $request->file('imagen')->storeAs('public/categorias/', $categoria['imagen']);
             $categoria = $request->all();
             $categoria['imagen'] = $request->file('imagen')->getClientOriginalName();
         }
@@ -98,7 +98,7 @@ class CategoriaController extends Controller
         $img = Categoria::all();
         if ($request->hasFile('imagen')) {
             $img['imagen'] = $request->file('imagen')->getClientOriginalName();
-            $request->file('imagen')->storeAs('public/categorias', $img['imagen']);
+            $request->file('imagen')->storeAs('public/categorias/', $img['imagen']);
             $img = $request->all();
             $img['imagen'] = $request->file('imagen')->getClientOriginalName();
         
