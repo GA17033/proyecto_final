@@ -28,9 +28,6 @@ Route::resource('clientes',App\Http\Controllers\ClienteController::class)->middl
 Route::resource('pedidos',App\Http\Controllers\PedidoController::class)->middleware('auth');
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');
 
-//Route::apiResource('v1/posts', App\Http\Controllers\Api\V1\PostController::class)->middleware('api');
-//para acceder a la api http://localhost/proyecto_final/public/v1/posts
-
 Route::group(['middleware' => ['cors']], function () {
     Route::apiResource('api/consumir', App\Http\Controllers\Api\V1\PostController::class)->middleware('api');
     //Rutas a las que se permitirá acceso
