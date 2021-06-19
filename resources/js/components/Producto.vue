@@ -5,7 +5,7 @@
                 <div class="product-thumnail">
                     <a href="" title="T-Shirt Raw Hem Organic Boro Constrast Denim">
                         <figure>
-                            <img :src="'http://127.0.0.1:8000/storage/productos/'+p['foto']" :alt="p['nombre']" width="150"/>
+                            <img :src="'http://127.0.0.1:8000/storage/productos/'+p['foto']" :alt="p['nombre']" width="150" height="100"/>
                         </figure>
                     </a>
                 </div>

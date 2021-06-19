@@ -91,7 +91,7 @@
                                             <td>{{ $producto->cantidad }}</td>
                                             <td>{{ $producto->ranking }}</td>
                                             <td><img src="{{ asset('storage/productos') . '/' . $producto->foto }}"
-                                                    alt="{{ $producto->nombre }}" width="150"></td>
+                                                    alt="{{ $producto->nombre }}" width="150" height="100"></td>
 
                                             <td>
                                                 <form action="{{ route('productos.destroy', $producto->id) }}"
