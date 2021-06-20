@@ -71,16 +71,16 @@
                                             <td>{{ ++$i }}</td>
 
                                             <td>{{ $proveedore->nombre }}</td>
-                                            <td>{{ $proveedore->Direccion }}</td>
-                                            <td>{{ $proveedore->Ciudad }}</td>
-                                            <td>{{ $proveedore->Codigo_postal }}</td>
-                                            <td>{{ $proveedore->Telefono }}</td>
-                                            <td>{{ $proveedore->Email }}</td>
-                                            <td>{{ $proveedore->Metodos_de_pagos }}</td>
-                                            <td>{{ $proveedore->Tipo_descuento }}</td>
-                                            <td>{{ $proveedore->Notas }}</td>
-                                            <td>{{ $proveedore->Descuento_disponible }}</td>
-                                            <td>{{ $proveedore->Pais }}</td>
+                                            <td>{{ $proveedore->direccion }}</td>
+                                            <td>{{ $proveedore->ciudad }}</td>
+                                            <td>{{ $proveedore->codigo_postal }}</td>
+                                            <td>{{ $proveedore->telefono }}</td>
+                                            <td>{{ $proveedore->email }}</td>
+                                            <td>{{ $proveedore->metodos_de_pagos }}</td>
+                                            <td>{{ $proveedore->tipo_descuento }}</td>
+                                            <td>{{ $proveedore->notas }}</td>
+                                            <td>{{ $proveedore->descuento_disponible }}</td>
+                                            <td>{{ $proveedore->pais }}</td>
 
                                             <td>
                                                 <form action="{{ route('proveedores.destroy', $proveedore->id) }}"

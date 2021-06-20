@@ -26,43 +26,43 @@
                         </div>
                         <div class="form-group">
                             <strong>Direccion:</strong>
-                            {{ $proveedore->Direccion }}
+                            {{ $proveedore->direccion }}
                         </div>
                         <div class="form-group">
                             <strong>Ciudad:</strong>
-                            {{ $proveedore->Ciudad }}
+                            {{ $proveedore->ciudad }}
                         </div>
                         <div class="form-group">
                             <strong>Codigo Postal:</strong>
-                            {{ $proveedore->Codigo_postal }}
+                            {{ $proveedore->codigo_postal }}
                         </div>
                         <div class="form-group">
                             <strong>Telefono:</strong>
-                            {{ $proveedore->Telefono }}
+                            {{ $proveedore->telefono }}
                         </div>
                         <div class="form-group">
                             <strong>Email:</strong>
-                            {{ $proveedore->Email }}
+                            {{ $proveedore->email }}
                         </div>
                         <div class="form-group">
                             <strong>Metodos De Pagos:</strong>
-                            {{ $proveedore->Metodos_de_pagos }}
+                            {{ $proveedore->metodos_de_pagos }}
                         </div>
                         <div class="form-group">
                             <strong>Tipo Descuento:</strong>
-                            {{ $proveedore->Tipo_descuento }}
+                            {{ $proveedore->tipo_descuento }}
                         </div>
                         <div class="form-group">
                             <strong>Notas:</strong>
-                            {{ $proveedore->Notas }}
+                            {{ $proveedore->notas }}
                         </div>
                         <div class="form-group">
                             <strong>Descuento Disponible:</strong>
-                            {{ $proveedore->Descuento_disponible }}
+                            {{ $proveedore->descuento_disponible }}
                         </div>
                         <div class="form-group">
                             <strong>Pais:</strong>
-                            {{ $proveedore->Pais }}
+                            {{ $proveedore->pais }}
                         </div>
 
                     </div>

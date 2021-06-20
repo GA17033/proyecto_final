@@ -14,7 +14,7 @@ class Pagos extends Migration
     public function up()
     {
         Schema::create('pagos', function (Blueprint $table) {
-            $table->increments('id')->unsigned();
+            $table->id();
             $table->string('tipo_de_pago');
             $table->string('descripcion');
             $table->integer('estado');

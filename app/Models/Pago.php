@@ -34,5 +34,18 @@ class Pago extends Model
     protected $fillable = ['tipo_de_pago','permitido'];
 
 
+    
+    /*
+    public function pagos()
+    {
+        return $this->hasMany('App\Models\Proveedore');
+    }
+
+    
+    public function proveedores()
+    {
+        return $this->belongsTo('App\Models\Pago');
+    }
+    */
 
 }

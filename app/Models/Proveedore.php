@@ -9,16 +9,16 @@ use Illuminate\Database\Eloquent\Model;
  *
  * @property $id
  * @property $nombre
- * @property $Direccion
- * @property $Ciudad
- * @property $Codigo_postal
- * @property $Telefono
- * @property $Email
- * @property $Metodos_de_pagos
- * @property $Tipo_descuento
- * @property $Notas
- * @property $Descuento_disponible
- * @property $Pais
+ * @property $direccion
+ * @property $ciudad
+ * @property $codigo_postal
+ * @property $telefono
+ * @property $email
+ * @property $metodos_de_pagos
+ * @property $tipo_descuento
+ * @property $notas
+ * @property $descuento_disponible
+ * @property $pais
  * @property $created_at
  * @property $updated_at
  *
@@ -30,16 +30,16 @@ class Proveedore extends Model
     
     static $rules = [
 		'nombre' => 'required',
-		'Direccion' => 'required',
-		'Ciudad' => 'required',
-		'Codigo_postal' => 'required',
-		'Telefono' => 'required',
-		'Email' => 'required',
-		'Metodos_de_pagos' => 'required',
-		'Tipo_descuento' => 'required',
-		'Notas' => 'required',
-		'Descuento_disponible' => 'required',
-		'Pais' => 'required',
+		'direccion' => 'required',
+		'ciudad' => 'required',
+		'codigo_postal' => 'required',
+		'telefono' => 'required',
+		'email' => 'required',
+		'metodos_de_pagos' => 'required',
+		'tipo_descuento' => 'required',
+		'notas' => 'required',
+		'descuento_disponible' => 'required',
+		'pais' => 'required',
     ];
 
     protected $perPage = 20;
@@ -49,8 +49,16 @@ class Proveedore extends Model
      *
      * @var array
      */
-    protected $fillable = ['nombre','Direccion','Ciudad','Codigo_postal','Telefono','Email','Metodos_de_pagos','Tipo_descuento','Notas','Descuento_disponible','Pais'];
+    protected $fillable = ['nombre','direccion','ciudad','codigo_postal','telefono','email','metodos_de_pagos','tipo_descuento','notas','descuento_disponible','pais'];
 
+
+	
+    /*
+    public function productos()
+    {
+        return $this->hasMany('App\Models\Producto');
+    }
+    */
 
 
 }

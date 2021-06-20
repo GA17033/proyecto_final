@@ -15,21 +15,22 @@ class Productos extends Migration
     {
         //
         Schema::create('productos', function (Blueprint $table) {
-            $table->increments('id')->unsigned();
+            $table->id();
             
-            $table->integer('id_categorias')->unsigned();
-            $table->integer('id_proveedores')->unsigned();
-            //para las relaciones
+            $table->unsignedBigInteger('id_categorias')->nullable();
+            $table->unsignedBigInteger('id_proveedores')->nullable();
 
-            $table->foreign('id_proveedores')->references('id')->on('proveedores');
-            $table->foreign('id_categorias')->references('id')->on('categorias');
             $table->string('nombre');
             $table->string('descripcion');
-            $table->integer('precio');
+            $table->decimal('precio',8,2);
             $table->integer('cantidad');
             $table->integer('ranking');
             $table->string('foto');
             $table->timestamps();
+
+            //para las relaciones
+            $table->foreign('id_categorias')->references('id')->on('categorias');
+            $table->foreign('id_proveedores')->references('id')->on('proveedores');
         });
     }
 
