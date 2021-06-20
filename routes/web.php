@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('inicio');
 });
 
+Route::get('/acerca', function () {
+    return view('acerca');
+});
+
 
 Auth::routes();
 

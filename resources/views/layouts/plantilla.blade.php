@@ -94,7 +94,7 @@
                                         aria-hidden="true"></i></a>
                             </li>
                             <li class="menu-item">
-                                <a href="acerca" class="link-term mercado-item-title">Acerca de nosotros</a>
+                                <a href="/acerca" class="link-term mercado-item-title">Acerca de nosotros</a>
                             </li>
                             <li class="menu-item">
                                 <a href="compras" class="link-term mercado-item-title">compras</a>
