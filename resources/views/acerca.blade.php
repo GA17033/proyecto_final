@@ -158,12 +158,9 @@
                                 <p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random text...</p>
                             </div>
                         </div>
-                        {{-- fin fila1 --}}
-                        </div>
-
-                        {{-- fila 2 --}}
-                        <div class="row">
-
+            
+                    
+                       
                         <div class="team-member equal-elem col">
                             <div class="media">
                                 <a href="#" title="BRAUM">
@@ -176,34 +173,9 @@
                                 <p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random text...</p>
                             </div>
                         </div>
-
-                        <div class="team-member equal-elem col">
-                            <div class="media">
-                                <a href="#" title="LUCIA">
-                                    <figure><img src="/images/member-lucia.jpg" alt="LUCIA"></figure>
-                                </a>
-                            </div>
-                            <div class="info">
-                                <b class="name">LUCIA</b>
-                                <span class="title">Manager</span>
-                                <p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random text...</p>
-                            </div>
+                         {{-- fin fila1 --}}
                         </div>
-
-                        <div class="team-member equal-elem col">
-                            <div class="media">
-                                <a href="#" title="NANA">
-                                    <figure><img src="/images/member-nana.jpg" alt="NANA"></figure>
-                                </a>
-                            </div>
-                            <div class="info">
-                                <b class="name">NANA</b>
-                                <span class="title">Marketer</span>
-                                <p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random text...</p>
-                            </div>
-                        </div>
-                        {{-- fin fila2 --}}
-                        </div>
+                        
 
                     </div>
 
