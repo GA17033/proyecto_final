@@ -90,7 +90,7 @@
                     <div class="container">
                         <ul class="nav primary clone-main-menu" id="mercado_main" data-menuname="Main menu">
                             <li class="menu-item home-icon">
-                                <a href="/inicio" class="link-term mercado-item-title"><i class="fa fa-home"
+                                <a href="/" class="link-term mercado-item-title"><i class="fa fa-home"
                                         aria-hidden="true"></i></a>
                             </li>
                             <li class="menu-item">

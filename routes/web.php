@@ -13,20 +13,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/inicio', function () {
+Route::get('/', function () {
     return view('inicio');
 });
 
 
 Auth::routes();
 
-Route::resource('categorias',App\Http\Controllers\CategoriaController::class)->middleware('auth');
-Route::resource('productos',App\Http\Controllers\ProductoController::class)->middleware('auth');
-Route::resource('proveedores',App\Http\Controllers\ProveedoreController::class)->middleware('auth');
-Route::resource('pagos',App\Http\Controllers\PagoController::class)->middleware('auth');
-Route::resource('clientes',App\Http\Controllers\ClienteController::class)->middleware('auth');
+Route::resource('/admin/categorias',App\Http\Controllers\CategoriaController::class)->middleware('auth');
+Route::resource('/admin/productos',App\Http\Controllers\ProductoController::class)->middleware('auth');
+Route::resource('/admin/proveedores',App\Http\Controllers\ProveedoreController::class)->middleware('auth');
+Route::resource('/admin/pagos',App\Http\Controllers\PagoController::class)->middleware('auth');
+Route::resource('/admin/clientes',App\Http\Controllers\ClienteController::class)->middleware('auth');
 Route::resource('pedidos',App\Http\Controllers\PedidoController::class)->middleware('auth');
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');
+Route::get('/admin', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');
 
 Route::group(['middleware' => ['cors']], function () {
     Route::apiResource('api/consumir', App\Http\Controllers\Api\V1\PostController::class)->middleware('api');
