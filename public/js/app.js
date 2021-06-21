@@ -1935,12 +1935,160 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /*
     archivo json,
     tipo->productos, categorias, proveedores,
     json['tipo']-->es una lista de objetos de tipo
-
+          {{--  --}}
 
 */
 
@@ -37848,7 +37996,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("h1", [_vm._v("Hola")])
+  return _c("div")
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -37873,25 +38021,480 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("table", [
+  return _c("main", { attrs: { id: "main" } }, [
+    _c("div", { staticClass: "container" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _vm._m(1),
+      _vm._v(" "),
       _c(
-        "tbody",
-        _vm._l(_vm.json["productos"], function(p) {
-          return _c("tr", { key: p["id"] }, [
-            _c("td", [_vm._v(_vm._s(p["id"]))]),
+        "div",
+        { staticClass: "wrap-show-advance-info-box style-1 has-countdown" },
+        [
+          _c("h3", { staticClass: "title-box" }, [_vm._v("En Venta")]),
+          _vm._v(" "),
+          _c("div", {
+            staticClass: "wrap-countdown mercado-countdown",
+            attrs: { "data-expire": "2020/12/12 12:34:56" }
+          }),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "wrap-products slide-carousel owl-carousel style-nav-1 equal-container ",
+              attrs: {
+                "data-items": "5",
+                "data-loop": "false",
+                "data-nav": "true",
+                "data-dots": "false",
+                "data-responsive":
+                  '{"0":{"items":"1"},"480":{"items":"2"},"768":{"items":"3"},"992":{"items":"4"},"1200":{"items":"5"}}'
+              }
+            },
+            [
+              _c(
+                "div",
+                { staticClass: "product product-style-2 equal-elem " },
+                [
+                  _c(
+                    "ul",
+                    {
+                      staticClass: "product-list grid-products equal-container"
+                    },
+                    _vm._l(_vm.json["productos"], function(p) {
+                      return _c(
+                        "li",
+                        {
+                          key: p["id"],
+                          staticClass: "col-lg-4 col-md-6 col-sm-6 col-xs-6 "
+                        },
+                        [
+                          _c("div", { staticClass: "product-thumnail" }, [
+                            _c(
+                              "a",
+                              {
+                                attrs: {
+                                  href: "#",
+                                  title:
+                                    "T-Shirt Raw Hem Organic Boro Constrast Denim"
+                                }
+                              },
+                              [
+                                _c("figure", [
+                                  _c("img", {
+                                    staticClass: "img-fluid",
+                                    attrs: {
+                                      src: "/storage/productos/" + p["foto"],
+                                      alt: p["nombre"],
+                                      width: "90px"
+                                    }
+                                  })
+                                ])
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _vm._m(2, true),
+                            _vm._v(" "),
+                            _vm._m(3, true)
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "product-info" }, [
+                            _c("div", { staticClass: "wrap-price" }, [
+                              _c("ins", [
+                                _c("p", { staticClass: "product-price" }, [
+                                  _c("span", { staticClass: "product-price" }, [
+                                    _vm._v("$" + _vm._s(p["precio"]))
+                                  ])
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _vm._m(4, true)
+                            ])
+                          ])
+                        ]
+                      )
+                    }),
+                    0
+                  )
+                ]
+              )
+            ]
+          )
+        ]
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "wrap-show-advance-info-box style-1" }, [
+        _c("h3", { staticClass: "title-box" }, [
+          _vm._v("Ctegorias De Prodcutos")
+        ]),
+        _vm._v(" "),
+        _vm._m(5),
+        _vm._v(" "),
+        _c("div", { staticClass: "wrap-products" }, [
+          _c("div", { staticClass: "wrap-product-tab tab-style-1" }, [
+            _c("div", { staticClass: "tab-control" }, [
+              _c(
+                "ul",
+                {
+                  staticClass: "list-style vertical-list list-limited",
+                  attrs: { "data-show": "6" }
+                },
+                _vm._l(_vm.json["categorias"], function(cat) {
+                  return _c(
+                    "li",
+                    { key: cat["id"], staticClass: "list-item" },
+                    [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "tab-control-item",
+                          attrs: { href: "#fashion_1a" }
+                        },
+                        [_vm._v(" " + _vm._s(cat["nombre"]))]
+                      )
+                    ]
+                  )
+                }),
+                0
+              )
+            ]),
             _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(p["nombre"]))]),
-            _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(p["foto"]))])
+            _c("div", { staticClass: "tab-contents" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "tab-content-item active",
+                  attrs: { id: "fashion_1a" }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "wrap-products slide-carousel owl-carousel style-nav-1 equal-container",
+                      attrs: {
+                        "data-items": "5",
+                        "data-loop": "false",
+                        "data-nav": "true",
+                        "data-dots": "false",
+                        "data-responsive":
+                          '{"0":{"items":"1"},"480":{"items":"2"},"768":{"items":"3"},"992":{"items":"4"},"1200":{"items":"5"}}'
+                      }
+                    },
+                    [
+                      _c(
+                        "div",
+                        { staticClass: "product product-style-2 equal-elem " },
+                        [
+                          _c(
+                            "ul",
+                            {
+                              staticClass:
+                                "list-style vertical-list list-limited",
+                              attrs: { "data-show": "6" }
+                            },
+                            _vm._l(_vm.json["categorias"], function(cat) {
+                              return _c(
+                                "li",
+                                { key: cat["id"], staticClass: "list-item" },
+                                [
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-thumnail" },
+                                    [
+                                      _c(
+                                        "a",
+                                        {
+                                          attrs: {
+                                            href: "detail.html",
+                                            title:
+                                              "T-Shirt Raw Hem Organic Boro Constrast Denim"
+                                          }
+                                        },
+                                        [
+                                          _c("figure", [
+                                            _c("img", {
+                                              attrs: {
+                                                src:
+                                                  "/storage/categorias/" +
+                                                  cat["imagen"],
+                                                alt: cat["nombre"],
+                                                width: "800",
+                                                height: "800"
+                                              }
+                                            })
+                                          ])
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _vm._m(6, true),
+                                      _vm._v(" "),
+                                      _vm._m(7, true)
+                                    ]
+                                  )
+                                ]
+                              )
+                            }),
+                            0
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "ul",
+                            {
+                              staticClass:
+                                "list-style vertical-list list-limited",
+                              attrs: { "data-show": "6" }
+                            },
+                            _vm._l(_vm.json["categorias"], function(cat) {
+                              return _c(
+                                "li",
+                                { key: cat["id"], staticClass: "list-item" },
+                                [
+                                  _c("div", { staticClass: "product-info" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        staticClass: "product-name",
+                                        attrs: { href: "#" }
+                                      },
+                                      [
+                                        _c("span", [
+                                          _vm._v(_vm._s(cat["nombre"]))
+                                        ])
+                                      ]
+                                    )
+                                  ])
+                                ]
+                              )
+                            }),
+                            0
+                          )
+                        ]
+                      )
+                    ]
+                  )
+                ]
+              )
+            ])
           ])
-        }),
-        0
-      )
+        ])
+      ])
     ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "wrap-main-slide" }, [
+      _c(
+        "div",
+        {
+          staticClass: "slide-carousel owl-carousel style-nav-1",
+          attrs: {
+            "data-items": "1",
+            "data-loop": "1",
+            "data-nav": "true",
+            "data-dots": "false"
+          }
+        },
+        [
+          _c("div", { staticClass: "item-slide" }, [
+            _c("img", {
+              staticClass: "img-slide",
+              attrs: { src: "/images/main-slider-1-1.jpg", alt: "" }
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "slide-info slide-1" }, [
+              _c("h2", { staticClass: "f-title" }, [
+                _vm._v("Kid Smart "),
+                _c("b", [_vm._v("Watches")])
+              ]),
+              _vm._v(" "),
+              _c("span", { staticClass: "subtitle" }, [
+                _vm._v("Compra todos tus productos Smart por internet.")
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "sale-info" }, [
+                _vm._v("Only price: "),
+                _c("span", { staticClass: "price" }, [_vm._v("$59.99")])
+              ]),
+              _vm._v(" "),
+              _c("a", { staticClass: "btn-link", attrs: { href: "#" } }, [
+                _vm._v("Shop Now")
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "item-slide" }, [
+            _c("img", {
+              staticClass: "img-slide",
+              attrs: { src: "/images/main-slider-1-2.jpg", alt: "" }
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "slide-info slide-2" }, [
+              _c("h2", { staticClass: "f-title" }, [_vm._v("Extra 25% Off")]),
+              _vm._v(" "),
+              _c("span", { staticClass: "f-subtitle" }, [
+                _vm._v("On online payments")
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "discount-code" }, [
+                _vm._v("Use Code: #FA6868")
+              ]),
+              _vm._v(" "),
+              _c("h4", { staticClass: "s-title" }, [_vm._v("Get Free")]),
+              _vm._v(" "),
+              _c("p", { staticClass: "s-subtitle" }, [
+                _vm._v("TRansparent Bra Straps")
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "item-slide" }, [
+            _c("img", {
+              staticClass: "img-slide",
+              attrs: { src: "/images/main-slider-1-3.jpg", alt: "" }
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "slide-info slide-3" }, [
+              _c("h2", { staticClass: "f-title" }, [
+                _vm._v("Great Range of "),
+                _c("b", [_vm._v("Exclusive Furniture Packages")])
+              ]),
+              _vm._v(" "),
+              _c("span", { staticClass: "f-subtitle" }, [
+                _vm._v("Exclusive Furniture Packages to Suit every need.")
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "sale-info" }, [
+                _vm._v("Stating at: "),
+                _c("b", { staticClass: "price" }, [_vm._v("$225.00")])
+              ]),
+              _vm._v(" "),
+              _c("a", { staticClass: "btn-link", attrs: { href: "#" } }, [
+                _vm._v("Shop Now")
+              ])
+            ])
+          ])
+        ]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "wrap-banner style-twin-default" }, [
+      _c("div", { staticClass: "banner-item" }, [
+        _c(
+          "a",
+          { staticClass: "link-banner banner-effect-1", attrs: { href: "#" } },
+          [
+            _c("figure", [
+              _c("img", {
+                attrs: {
+                  src: "/images/home-1-banner-1.jpg",
+                  alt: "",
+                  width: "580",
+                  height: "190"
+                }
+              })
+            ])
+          ]
+        )
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "banner-item" }, [
+        _c(
+          "a",
+          { staticClass: "link-banner banner-effect-1", attrs: { href: "#" } },
+          [
+            _c("figure", [
+              _c("img", {
+                attrs: {
+                  src: "/images/home-1-banner-2.jpg",
+                  alt: "",
+                  width: "580",
+                  height: "190"
+                }
+              })
+            ])
+          ]
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "group-flash" }, [
+      _c("span", { staticClass: "flash-item sale-label" }, [_vm._v("sale")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "wrap-btn" }, [
+      _c("a", { staticClass: "function-link", attrs: { href: "#" } }, [
+        _vm._v("Detalles")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("del", [
+      _c("p", { staticClass: "product-price" }, [_vm._v("$1000.00")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "wrap-top-banner" }, [
+      _c(
+        "a",
+        { staticClass: "link-banner banner-effect-2", attrs: { href: "#" } },
+        [
+          _c("figure", [
+            _c("img", {
+              attrs: {
+                src: "images/fashion-accesories-banner.jpg",
+                width: "1170",
+                height: "240",
+                alt: ""
+              }
+            })
+          ])
+        ]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "group-flash" }, [
+      _c("span", { staticClass: "flash-item new-label" }, [_vm._v("new")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "wrap-btn" }, [
+      _c("a", { staticClass: "function-link", attrs: { href: "#" } }, [
+        _vm._v("quick view")
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 

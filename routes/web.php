@@ -21,6 +21,9 @@ Route::get('/acerca', function () {
     return view('acerca');
 });
 
+Route::get('/compras', function () {
+    return view('compras');
+});
 
 Auth::routes();
 
