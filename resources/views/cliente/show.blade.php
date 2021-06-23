@@ -11,54 +11,50 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Ver Cliente</span>
+                            <span class="card-title">Show Cliente</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('clientes.index') }}"> Regresar</a>
+                            <a class="btn btn-primary" href="{{ route('clientes.index') }}"> Back</a>
                         </div>
                     </div>
 
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>Nombre:</strong>
-                            {{ $cliente->Nombre }}
+                            <strong>Nombres:</strong>
+                            {{ $cliente->nombres }}
                         </div>
                         <div class="form-group">
-                            <strong>Apellido:</strong>
-                            {{ $cliente->Apellido }}
+                            <strong>Apellidos:</strong>
+                            {{ $cliente->apellidos }}
                         </div>
                         <div class="form-group">
                             <strong>Clase:</strong>
-                            {{ $cliente->Clase }}
+                            {{ $cliente->clase }}
                         </div>
                         <div class="form-group">
                             <strong>Direccion:</strong>
-                            {{ $cliente->Direccion }}
+                            {{ $cliente->direccion }}
                         </div>
                         <div class="form-group">
                             <strong>Estado:</strong>
-                            {{ $cliente->Estado }}
+                            {{ $cliente->estado }}
                         </div>
                         <div class="form-group">
                             <strong>Pais:</strong>
-                            {{ $cliente->Pais }}
+                            {{ $cliente->pais }}
                         </div>
                         <div class="form-group">
                             <strong>Telefono:</strong>
-                            {{ $cliente->Telefono }}
+                            {{ $cliente->telefono }}
                         </div>
                         <div class="form-group">
                             <strong>Email:</strong>
-                            {{ $cliente->Email }}
+                            {{ $cliente->email }}
                         </div>
                         <div class="form-group">
-                            <strong>Password:</strong>
-                            {{ $cliente->Password }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Targeta Credito:</strong>
-                            {{ $cliente->Targeta_Credito }}
+                            <strong>Tarjeta Credito:</strong>
+                            {{ $cliente->tarjeta_credito }}
                         </div>
 
                     </div>

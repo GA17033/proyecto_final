@@ -29,8 +29,8 @@ class Productos extends Migration
             $table->timestamps();
 
             //para las relaciones
-            $table->foreign('id_categorias')->references('id')->on('categorias');
-            $table->foreign('id_proveedores')->references('id')->on('proveedores');
+            $table->foreign('id_categorias')->references('id')->on('categorias')->onDelete('cascade');
+            $table->foreign('id_proveedores')->references('id')->on('proveedores')->onDelete('cascade');
         });
     }
 

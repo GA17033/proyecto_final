@@ -10,20 +10,16 @@
             <div class="col-md-12">
 
                 @includeif('partials.errors')
-                <div class="float-right">
-                    <a class="btn btn-primary" href="{{ route('pagos.index') }}"> Regresar</a>
-                </div>
+
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Actualizar Cliente</span>
+                        <span class="card-title">Update Cliente</span>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('clientes.update', $cliente->id) }}"  role="form" enctype="multipart/form-data">
                             {{ method_field('PATCH') }}
                             @csrf
-                            @php
-                            $btn=2 
-                         @endphp
+
                             @include('cliente.form')
 
                         </form>

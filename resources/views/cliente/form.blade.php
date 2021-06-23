@@ -1,70 +1,54 @@
 <div class="box box-info padding-1">
     <div class="box-body">
-        <div class="form-row">
-            <div class="form-group col">
-                {{ Form::label('Nombre') }}
-                {{ Form::text('Nombre', $cliente->Nombre, ['class' => 'form-control' . ($errors->has('Nombre') ? ' is-invalid' : ''), 'placeholder' => 'Nombre']) }}
-                {!! $errors->first('Nombre', '<div class="invalid-feedback">:message</p></div>') !!}
-            </div>
-            <div class="form-group col">
-                {{ Form::label('Apellido') }}
-                {{ Form::text('Apellido', $cliente->Apellido, ['class' => 'form-control' . ($errors->has('Apellido') ? ' is-invalid' : ''), 'placeholder' => 'Apellido']) }}
-                {!! $errors->first('Apellido', '<div class="invalid-feedback">:message</p></div>') !!}
-            </div>
+        
+        <div class="form-group">
+            {{ Form::label('nombres') }}
+            {{ Form::text('nombres', $cliente->nombres, ['class' => 'form-control' . ($errors->has('nombres') ? ' is-invalid' : ''), 'placeholder' => 'Nombres']) }}
+            {!! $errors->first('nombres', '<div class="invalid-feedback">:message</p>') !!}
         </div>
-        <div class="form-row">
-            <div class="form-group col">
-                {{ Form::label('Direccion') }}
-                {{ Form::text('Direccion', $cliente->Direccion, ['class' => 'form-control' . ($errors->has('Direccion') ? ' is-invalid' : ''), 'placeholder' => 'Direccion']) }}
-                {!! $errors->first('Direccion', '<div class="invalid-feedback">:message</p></div>') !!}
-            </div>
-            <div class="form-group col">
-                {{ Form::label('Estado') }}
-                {{ Form::text('Estado', $cliente->Estado, ['class' => 'form-control' . ($errors->has('Estado') ? ' is-invalid' : ''), 'placeholder' => 'Estado']) }}
-                {!! $errors->first('Estado', '<div class="invalid-feedback">:message</p></div>') !!}
-            </div>
+        <div class="form-group">
+            {{ Form::label('apellidos') }}
+            {{ Form::text('apellidos', $cliente->apellidos, ['class' => 'form-control' . ($errors->has('apellidos') ? ' is-invalid' : ''), 'placeholder' => 'Apellidos']) }}
+            {!! $errors->first('apellidos', '<div class="invalid-feedback">:message</p>') !!}
         </div>
-        <div class="form-row">
-            <div class="form-group col">
-                {{ Form::label('Pais') }}
-                {{ Form::text('Pais', $cliente->Pais, ['class' => 'form-control' . ($errors->has('Pais') ? ' is-invalid' : ''), 'placeholder' => 'Pais']) }}
-                {!! $errors->first('Pais', '<div class="invalid-feedback">:message</p></div>') !!}
-            </div>
-            <div class="form-group col">
-                {{ Form::label('Email') }}
-                {{ Form::text('Email', $cliente->Email, ['class' => 'form-control' . ($errors->has('Email') ? ' is-invalid' : ''), 'placeholder' => 'Email']) }}
-                {!! $errors->first('Email', '<div class="invalid-feedback">:message</p></div>') !!}
-            </div>
+        <div class="form-group">
+            {{ Form::label('clase') }}
+            {{ Form::text('clase', $cliente->clase, ['class' => 'form-control' . ($errors->has('clase') ? ' is-invalid' : ''), 'placeholder' => 'Clase']) }}
+            {!! $errors->first('clase', '<div class="invalid-feedback">:message</p>') !!}
         </div>
-        <div class="form-row">
-            <div class="form-group col">
-                {{ Form::label('Clase') }}
-                {{ Form::text('Clase', $cliente->Clase, ['class' => 'form-control' . ($errors->has('Clase') ? ' is-invalid' : ''), 'placeholder' => 'Clase']) }}
-                {!! $errors->first('Clase', '<div class="invalid-feedback">:message</p></div>') !!}
-            </div>
-            <div class="form-group col">
-                {{ Form::label('Telefono') }}
-                {{ Form::text('Telefono', $cliente->Telefono, ['class' => 'form-control' . ($errors->has('Telefono') ? ' is-invalid' : ''), 'placeholder' => 'Telefono']) }}
-                {!! $errors->first('Telefono', '<div class="invalid-feedback">:message</p></div>') !!}
-            </div>
+        <div class="form-group">
+            {{ Form::label('direccion') }}
+            {{ Form::text('direccion', $cliente->direccion, ['class' => 'form-control' . ($errors->has('direccion') ? ' is-invalid' : ''), 'placeholder' => 'Direccion']) }}
+            {!! $errors->first('direccion', '<div class="invalid-feedback">:message</p>') !!}
         </div>
-        <div class="form-row">
-
-            <div class="form-group col">
-                {{ Form::label('Password') }}
-                {{ Form::text('Password', $cliente->Password, ['class' => 'form-control' . ($errors->has('Password') ? ' is-invalid' : ''), 'placeholder' => 'Password']) }}
-                {!! $errors->first('Password', '<div class="invalid-feedback">:message</p></div>') !!}
-            </div>
-            <div class="form-group col">
-                {{ Form::label('Tarjeta_Credito') }}
-                {{ Form::text('Targeta_Credito', $cliente->Targeta_Credito, ['class' => 'form-control' . ($errors->has('Targeta_Credito') ? ' is-invalid' : ''), 'placeholder' => 'Tarjeta Credito']) }}
-                {!! $errors->first('Targeta_Credito', '<div class="invalid-feedback">:message</p></div>') !!}
-            </div>
+        <div class="form-group">
+            {{ Form::label('estado') }}
+            {{ Form::text('estado', $cliente->estado, ['class' => 'form-control' . ($errors->has('estado') ? ' is-invalid' : ''), 'placeholder' => 'Estado']) }}
+            {!! $errors->first('estado', '<div class="invalid-feedback">:message</p>') !!}
+        </div>
+        <div class="form-group">
+            {{ Form::label('pais') }}
+            {{ Form::text('pais', $cliente->pais, ['class' => 'form-control' . ($errors->has('pais') ? ' is-invalid' : ''), 'placeholder' => 'Pais']) }}
+            {!! $errors->first('pais', '<div class="invalid-feedback">:message</p>') !!}
+        </div>
+        <div class="form-group">
+            {{ Form::label('telefono') }}
+            {{ Form::text('telefono', $cliente->telefono, ['class' => 'form-control' . ($errors->has('telefono') ? ' is-invalid' : ''), 'placeholder' => 'Telefono']) }}
+            {!! $errors->first('telefono', '<div class="invalid-feedback">:message</p>') !!}
+        </div>
+        <div class="form-group">
+            {{ Form::label('email') }}
+            {{ Form::text('email', $cliente->email, ['class' => 'form-control' . ($errors->has('email') ? ' is-invalid' : ''), 'placeholder' => 'Email']) }}
+            {!! $errors->first('email', '<div class="invalid-feedback">:message</p>') !!}
+        </div>
+        <div class="form-group">
+            {{ Form::label('tarjeta_credito') }}
+            {{ Form::text('tarjeta_credito', $cliente->tarjeta_credito, ['class' => 'form-control' . ($errors->has('tarjeta_credito') ? ' is-invalid' : ''), 'placeholder' => 'Tarjeta Credito']) }}
+            {!! $errors->first('tarjeta_credito', '<div class="invalid-feedback">:message</p>') !!}
         </div>
 
-        <div class="box-footer mt20">
-            <button type="submit"
-                class="btn btn-{{ $btn == 1 ? 'success' : 'warning' }}">{{ $btn == 1 ? 'Enviar' : 'Editar' }}</button>
-        </div>
+    </div>
+    <div class="box-footer mt20">
+        <button type="submit" class="btn btn-primary">Submit</button>
     </div>
 </div>

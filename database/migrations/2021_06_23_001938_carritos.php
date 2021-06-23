@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Pagos extends Migration
+class Carritos extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,13 @@ class Pagos extends Migration
      */
     public function up()
     {
-        Schema::create('pagos', function (Blueprint $table) {
+        Schema::create('carritos', function (Blueprint $table) {
             $table->id();
-            $table->string('tipo_de_pago');
-            $table->boolean('permitido')->nullable();
+
+            $table->unsignedBigInteger('id_clientes')->nullable();
+            $table->foreign('id_clientes')->references('id')->on('clientes')->onDelete('cascade');
+
+            $table->decimal('total', 8, 2);
             $table->timestamps();
         });
     }
@@ -28,6 +31,6 @@ class Pagos extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pagos');
+        Schema::dropIfExists('carritos');
     }
 }

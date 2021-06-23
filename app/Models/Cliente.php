@@ -8,16 +8,16 @@ use Illuminate\Database\Eloquent\Model;
  * Class Cliente
  *
  * @property $id
- * @property $Nombre
- * @property $Apellido
- * @property $Clase
- * @property $Direccion
- * @property $Estado
- * @property $Pais
- * @property $Telefono
- * @property $Email
- * @property $Password
- * @property $Targeta_Credito
+ * @property $nombres
+ * @property $apellidos
+ * @property $clase
+ * @property $direccion
+ * @property $estado
+ * @property $pais
+ * @property $telefono
+ * @property $email
+ * @property $password
+ * @property $tarjeta_credito
  * @property $created_at
  * @property $updated_at
  *
@@ -28,16 +28,15 @@ class Cliente extends Model
 {
     
     static $rules = [
-		'Nombre' => 'required',
-		'Apellido' => 'required',
-		'Clase' => 'required',
-		'Direccion' => 'required',
-		'Estado' => 'required',
-		'Pais' => 'required',
-		'Telefono' => 'required',
-		'Email' => 'required',
-		'Password' => 'required',
-		'Targeta_Credito' => 'required',
+		'nombres' => 'required',
+		'apellidos' => 'required',
+		'clase' => 'required',
+		'direccion' => 'required',
+		'estado' => 'required',
+		'pais' => 'required',
+		'telefono' => 'required',
+		'email' => 'required',
+		'tarjeta_credito' => 'required',
     ];
 
     protected $perPage = 20;
@@ -47,7 +46,7 @@ class Cliente extends Model
      *
      * @var array
      */
-    protected $fillable = ['Nombre','Apellido','Clase','Direccion','Estado','Pais','Telefono','Email','Password','Targeta_Credito'];
+    protected $fillable = ['nombres','apellidos','clase','direccion','estado','pais','telefono','email','tarjeta_credito'];
 
 
 

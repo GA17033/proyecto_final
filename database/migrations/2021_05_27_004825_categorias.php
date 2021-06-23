@@ -18,7 +18,7 @@ class Categorias extends Migration
             $table->string('nombre');
             $table->string('descripcion');
             $table->string('imagen');
-            $table->integer('activo');
+            $table->boolean('activo')->nullable();
             $table->timestamps();
         });
     }

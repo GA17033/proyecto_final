@@ -15,7 +15,7 @@ class Proveedores extends Migration
     {
         Schema::create('proveedores', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('id_pagos')->nullable();
+            //$table->unsignedBigInteger('id_pagos')->nullable();
 
             $table->string('nombre',10);
             $table->string('direccion',50);
@@ -31,7 +31,7 @@ class Proveedores extends Migration
             $table->timestamps();
 
             //para las relaciones
-            $table->foreign('id_pagos')->references('id')->on('pagos')->onDelete('set null');
+            //$table->foreign('id_pagos')->references('id')->on('pagos')->onDelete('set null');
            
         });
     }
