@@ -21,6 +21,8 @@ use Illuminate\Database\Eloquent\Model;
  * @property $created_at
  * @property $updated_at
  *
+ * @property Carrito[] $carritos
+ * @property Compra[] $compras
  * @package App
  * @mixin \Illuminate\Database\Eloquent\Builder
  */
@@ -36,6 +38,7 @@ class Cliente extends Model
 		'pais' => 'required',
 		'telefono' => 'required',
 		'email' => 'required',
+        'password' => 'required',
 		'tarjeta_credito' => 'required',
     ];
 
@@ -46,8 +49,24 @@ class Cliente extends Model
      *
      * @var array
      */
-    protected $fillable = ['nombres','apellidos','clase','direccion','estado','pais','telefono','email','tarjeta_credito'];
+    protected $fillable = ['nombres','apellidos','clase','direccion','estado','pais','telefono','email','password','tarjeta_credito'];
 
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function carritos()
+    {
+        return $this->hasMany('App\Models\Carrito', 'id_clientes', 'id');
+    }
+    
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function compras()
+    {
+        return $this->hasMany('App\Models\Compra', 'id_clientes', 'id');
+    }
+    
 
 }

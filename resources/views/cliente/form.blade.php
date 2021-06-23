@@ -42,6 +42,11 @@
             {!! $errors->first('email', '<div class="invalid-feedback">:message</p>') !!}
         </div>
         <div class="form-group">
+            {{ Form::label('password') }}
+            {{ Form::password('password', $cliente->password, ['class' => 'form-control' . ($errors->has('password') ? ' is-invalid' : ''), 'placeholder' => 'password(8 caracteres)']) }}
+            {!! $errors->first('password', '<div class="invalid-feedback">:message</p>') !!}
+        </div>
+        <div class="form-group">
             {{ Form::label('tarjeta_credito') }}
             {{ Form::text('tarjeta_credito', $cliente->tarjeta_credito, ['class' => 'form-control' . ($errors->has('tarjeta_credito') ? ' is-invalid' : ''), 'placeholder' => 'Tarjeta Credito']) }}
             {!! $errors->first('tarjeta_credito', '<div class="invalid-feedback">:message</p>') !!}
