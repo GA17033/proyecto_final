@@ -53,6 +53,10 @@
                             {{ $cliente->email }}
                         </div>
                         <div class="form-group">
+                            <strong>Clave:</strong>
+                            {{ $cliente->clave }}
+                        </div>
+                        <div class="form-group">
                             <strong>Tarjeta Credito:</strong>
                             {{ $cliente->tarjeta_credito }}
                         </div>

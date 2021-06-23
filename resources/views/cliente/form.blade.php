@@ -42,9 +42,9 @@
             {!! $errors->first('email', '<div class="invalid-feedback">:message</p>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('password') }}
-            {{ Form::password('password', $cliente->password, ['class' => 'form-control' . ($errors->has('password') ? ' is-invalid' : ''), 'placeholder' => 'password(8 caracteres)']) }}
-            {!! $errors->first('password', '<div class="invalid-feedback">:message</p>') !!}
+            {{ Form::label('clave') }}
+            {{ Form::text('clave', $cliente->clave, ['class' => 'form-control' . ($errors->has('clave') ? ' is-invalid' : ''), 'placeholder' => 'Clave']) }}
+            {!! $errors->first('clave', '<div class="invalid-feedback">:message</p>') !!}
         </div>
         <div class="form-group">
             {{ Form::label('tarjeta_credito') }}

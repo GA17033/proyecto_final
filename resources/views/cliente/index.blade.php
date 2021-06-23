@@ -44,6 +44,7 @@
 										<th>Pais</th>
 										<th>Telefono</th>
 										<th>Email</th>
+										<th>Clave</th>
 										<th>Tarjeta Credito</th>
 
                                         <th></th>
@@ -62,6 +63,7 @@
 											<td>{{ $cliente->pais }}</td>
 											<td>{{ $cliente->telefono }}</td>
 											<td>{{ $cliente->email }}</td>
+											<td>{{ $cliente->clave }}</td>
 											<td>{{ $cliente->tarjeta_credito }}</td>
 
                                             <td>

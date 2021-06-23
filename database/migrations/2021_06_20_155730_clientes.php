@@ -23,7 +23,8 @@ class Clientes extends Migration
             $table->string('pais',50);
             $table->string('telefono',50);
             $table->string('email')->unique();
-            $table->string('password',50);
+            $table->string('clave');
+            
             $table->string('tarjeta_credito',50);
             $table->timestamps();
         });
