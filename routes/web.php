@@ -25,6 +25,10 @@ Route::get('/compras', function () {
     return view('compras');
 });
 
+Route::get('/verificar', function () {
+    return view('verificar');
+});
+
 Auth::routes();
 
 Route::resource('/admin/categorias',App\Http\Controllers\CategoriaController::class)->middleware('auth');
