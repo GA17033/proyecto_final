@@ -38031,11 +38031,11 @@ var render = function() {
         "div",
         { staticClass: "wrap-show-advance-info-box style-1 has-countdown" },
         [
-          _c("h3", { staticClass: "title-box" }, [_vm._v("En Venta")]),
+          _c("h3", { staticClass: "title-box" }, [_vm._v("Ultimo en Venta")]),
           _vm._v(" "),
           _c("div", {
             staticClass: "wrap-countdown mercado-countdown",
-            attrs: { "data-expire": "2020/12/12 12:34:56" }
+            attrs: { "data-expire": "2022/12/12 12:34:56" }
           }),
           _vm._v(" "),
           _c(
@@ -38126,7 +38126,7 @@ var render = function() {
       _vm._v(" "),
       _c("div", { staticClass: "wrap-show-advance-info-box style-1" }, [
         _c("h3", { staticClass: "title-box" }, [
-          _vm._v("Ctegorias De Prodcutos")
+          _vm._v("Categorias De Productos")
         ]),
         _vm._v(" "),
         _vm._m(5),
@@ -38432,7 +38432,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "group-flash" }, [
-      _c("span", { staticClass: "flash-item sale-label" }, [_vm._v("sale")])
+      _c("span", { staticClass: "flash-item sale-label" }, [_vm._v("Venta")])
     ])
   },
   function() {

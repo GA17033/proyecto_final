@@ -82,8 +82,6 @@
                                 <div class="wrap-icon-section show-up-after-1024">
                                     <a href="#" class="mobile-navigation">
                                         <span><a href="/acerca" class="link-term mercado-item-title">Acerca de nosotros</a></span>
-                                        <span><a href="/acerca" class="link-term mercado-item-title">Acerca de nosotros</a></span>
-                                        <span><a href="carrito" class="link-term mercado-item-title">Carrito</a></span>
                                     </a>
                                 </div>
                             </div>
@@ -106,7 +104,7 @@
                                 <a href="/acerca" class="link-term mercado-item-title">Acerca de nosotros</a>
                             </li>
                             <li class="menu-item">
-                                <a href="compras" class="link-term mercado-item-title">compras</a>
+                                <a href="compras" class="link-term mercado-item-title">Productos</a>
                             </li>
                             <li class="menu-item">
                                 <a href="carrito" class="link-term mercado-item-title">Carrito</a>
