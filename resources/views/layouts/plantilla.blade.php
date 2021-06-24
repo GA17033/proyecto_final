@@ -46,12 +46,12 @@
                             <div class="wrap-search center-section">
                                 <div class="wrap-search-form">
                                     <form action="#" id="form-search-top" name="form-search-top">
-                                        <input type="text" name="search" value="" placeholder="Search here...">
+                                        <input type="text" name="search" value="" placeholder="Busca aquí...">
                                         <button form="form-search-top" type="button"><i class="fa fa-search"
                                                 aria-hidden="true"></i></button>
                                         <div class="wrap-list-cate">
                                             <input type="hidden" name="product-cate" value="0" id="product-cate">
-                                            <a href="#" class="link-control">All Category</a>
+                                            <a href="#" class="link-control">Todas</a>
 
 
                                         </div>
@@ -65,16 +65,25 @@
                                     <a href="#" class="link-direction">
                                         <i class="fa fa-shopping-basket" aria-hidden="true"></i>
                                         <div class="left-info">
-                                            <span class="index">4 items</span>
-                                            <span class="title">CART</span>
+                                            <span class="index">0 items</span>
+                                            <span class="title">Carrito</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="wrap-icon-section user">
+                                    <a href="#" class="link-direction">
+                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                        <div class="left-info">
+                                            <span class="index">Iniciar Sesión</span>
+                                            <span class="title">Aquí</span>
                                         </div>
                                     </a>
                                 </div>
                                 <div class="wrap-icon-section show-up-after-1024">
                                     <a href="#" class="mobile-navigation">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
+                                        <span><a href="/acerca" class="link-term mercado-item-title">Acerca de nosotros</a></span>
+                                        <span><a href="/acerca" class="link-term mercado-item-title">Acerca de nosotros</a></span>
+                                        <span><a href="carrito" class="link-term mercado-item-title">Carrito</a></span>
                                     </a>
                                 </div>
                             </div>
@@ -102,10 +111,6 @@
                             <li class="menu-item">
                                 <a href="carrito" class="link-term mercado-item-title">Carrito</a>
                             </li>
-                            <li class="menu-item">
-                                <a href="verificar" class="link-term mercado-item-title">verificar</a>
-                            </li>
-
                         </ul>
                     </div>
                 </div>
@@ -126,32 +131,32 @@
                             <li class="fc-info-item">
                                 <i class="fa fa-truck" aria-hidden="true"></i>
                                 <div class="wrap-left-info">
-                                    <h4 class="fc-name">Free Shipping</h4>
-                                    <p class="fc-desc">Free On Oder Over $99</p>
+                                    <h4 class="fc-name">ENVÍO GRATIS</h4>
+                                    <p class="fc-desc">Gratis con pedido superior a $ 99</p>
                                 </div>
 
                             </li>
                             <li class="fc-info-item">
                                 <i class="fa fa-recycle" aria-hidden="true"></i>
                                 <div class="wrap-left-info">
-                                    <h4 class="fc-name">Guarantee</h4>
-                                    <p class="fc-desc">30 Days Money Back</p>
+                                    <h4 class="fc-name">GARANTÍA</h4>
+                                    <p class="fc-desc">30 días de devolución de dinero</p>
                                 </div>
 
                             </li>
                             <li class="fc-info-item">
                                 <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
                                 <div class="wrap-left-info">
-                                    <h4 class="fc-name">Safe Payment</h4>
-                                    <p class="fc-desc">Safe your online payment</p>
+                                    <h4 class="fc-name">PAGO SEGURO</h4>
+                                    <p class="fc-desc">Asegure su pago en línea</p>
                                 </div>
 
                             </li>
                             <li class="fc-info-item">
                                 <i class="fa fa-life-ring" aria-hidden="true"></i>
                                 <div class="wrap-left-info">
-                                    <h4 class="fc-name">Online Suport</h4>
-                                    <p class="fc-desc">We Have Support 24/7</p>
+                                    <h4 class="fc-name">SOPORTE EN LÍNEA</h4>
+                                    <p class="fc-desc">Contamos con soporte 24/7</p>
                                 </div>
 
                             </li>
@@ -168,22 +173,21 @@
 
                             <div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
                                 <div class="wrap-footer-item">
-                                    <h3 class="item-header">Contact Details</h3>
+                                    <h3 class="item-header">DETALLES DE CONTACTO</h3>
                                     <div class="item-content">
                                         <div class="wrap-contact-detail">
                                             <ul>
                                                 <li>
                                                     <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                                    <p class="contact-txt">45 Grand Central Terminal New York,NY 1017
-                                                        United State USA</p>
+                                                    <p class="contact-txt">Santa Ana El SALVADOR</p>
                                                 </li>
                                                 <li>
                                                     <i class="fa fa-phone" aria-hidden="true"></i>
-                                                    <p class="contact-txt">(+123) 456 789 - (+123) 666 888</p>
+                                                    <p class="contact-txt">(+53) 1234/5678</p>
                                                 </li>
                                                 <li>
                                                     <i class="fa fa-envelope" aria-hidden="true"></i>
-                                                    <p class="contact-txt">Contact@yourcompany.com</p>
+                                                    <p class="contact-txt">Contacto@gmai.com</p>
                                                 </li>
                                             </ul>
                                         </div>
@@ -194,11 +198,11 @@
                             <div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
 
                                 <div class="wrap-footer-item">
-                                    <h3 class="item-header">Hot Line</h3>
+                                    <h3 class="item-header">LÍNEA DIRECTA</h3>
                                     <div class="item-content">
                                         <div class="wrap-hotline-footer">
-                                            <span class="desc">Call Us toll Free</span>
-                                            <b class="phone-number">(+123) 456 789 - (+123) 666 888</b>
+                                            <span class="desc">Llámenos al número gratuito</span>
+                                            <b class="phone-number">(+503) 1234-5678</b>
                                         </div>
                                     </div>
                                 </div>
@@ -210,37 +214,35 @@
                             <div class="col-lg-4 col-sm-4 col-md-4 col-xs-12 box-twin-content ">
                                 <div class="row">
                                     <div class="wrap-footer-item twin-item">
-                                        <h3 class="item-header">My Account</h3>
+                                        <h3 class="item-header">MI CUENTA</h3>
                                         <div class="item-content">
                                             <div class="wrap-vertical-nav">
                                                 <ul>
-                                                    <li class="menu-item"><a href="#" class="link-term">My Account</a>
+                                                    <li class="menu-item"><a href="#" class="link-term">Mi cuenta</a>
                                                     </li>
-                                                    <li class="menu-item"><a href="#" class="link-term">Brands</a></li>
-                                                    <li class="menu-item"><a href="#" class="link-term">Gift
-                                                            Certificates</a></li>
-                                                    <li class="menu-item"><a href="#" class="link-term">Affiliates</a>
+                                                    <li class="menu-item"><a href="#" class="link-term">Marcas</a></li>
+                                                    <li class="menu-item"><a href="#" class="link-term">Certificados de regalo</a></li>
+                                                    <li class="menu-item"><a href="#" class="link-term">Certificados de regalo</a>
                                                     </li>
-                                                    <li class="menu-item"><a href="#" class="link-term">Wish list</a>
+                                                    <li class="menu-item"><a href="#" class="link-term">Lista de deseos</a>
                                                     </li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="wrap-footer-item twin-item">
-                                        <h3 class="item-header">Infomation</h3>
+                                        <h3 class="item-header">INFOMACIÓN</h3>
                                         <div class="item-content">
                                             <div class="wrap-vertical-nav">
                                                 <ul>
-                                                    <li class="menu-item"><a href="#" class="link-term">Contact Us</a>
+                                                    <li class="menu-item"><a href="#" class="link-term">Contáctenos</a>
                                                     </li>
-                                                    <li class="menu-item"><a href="#" class="link-term">Returns</a></li>
-                                                    <li class="menu-item"><a href="#" class="link-term">Site Map</a>
+                                                    <li class="menu-item"><a href="#" class="link-term">Devoluciones</a></li>
+                                                    <li class="menu-item"><a href="#" class="link-term">Mapa del sitio</a>
                                                     </li>
-                                                    <li class="menu-item"><a href="#" class="link-term">Specials</a>
+                                                    <li class="menu-item"><a href="#" class="link-term">Historial de pedidos</a>
                                                     </li>
-                                                    <li class="menu-item"><a href="#" class="link-term">Order
-                                                            History</a></li>
+                                                    <li class="menu-item"><a href="#" class="link-term">Historial de pedidos</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -254,7 +256,7 @@
 
                             <div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
                                 <div class="wrap-footer-item">
-                                    <h3 class="item-header">We Using Safe Payments:</h3>
+                                    <h3 class="item-header">UTILIZAMOS PAGOS SEGUROS:</h3>
                                     <div class="item-content">
                                         <div class="wrap-list-item wrap-gallery">
                                             <img src="images/payment.png" style="max-width: 260px;">
@@ -265,7 +267,7 @@
 
                             <div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
                                 <div class="wrap-footer-item">
-                                    <h3 class="item-header">Social network</h3>
+                                    <h3 class="item-header">RED SOCIAL</h3>
                                     <div class="item-content">
                                         <div class="wrap-list-item social-network">
                                             <ul>
@@ -287,7 +289,7 @@
 
                             <div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
                                 <div class="wrap-footer-item">
-                                    <h3 class="item-header">Dowload App</h3>
+                                    <h3 class="item-header">RED SOCIAL</h3>
                                     <div class="item-content">
                                         <div class="wrap-list-item apps-list">
                                             <ul>
@@ -317,7 +319,7 @@
                 <div class="coppy-right-box">
                     <div class="container">
                         <div class="coppy-right-item item-left">
-                            <p class="coppy-right-text">Copyright © 2021 Tecnicas De Programacion. All rights reserved
+                            <p class="coppy-right-text">Copyright © 2021 Tecnicas De Programacion. Todos los derechos reservados
                             </p>
                         </div>
 

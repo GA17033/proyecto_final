@@ -9,8 +9,8 @@
 
         <div class="wrap-breadcrumb">
             <ul>
-                <li class="item-link"><a href="/" class="link">home</a></li>
-                <li class="item-link"><span>Contact us</span></li>
+                <li class="item-link"><a href="/" class="link">Inicio</a></li>
+                <li class="item-link"><span>CONTÁCTENOS</span></li>
             </ul>
         </div>
     </div>
@@ -19,7 +19,7 @@
         <!-- <div class="main-content-area"> -->
             
             <div class="aboutus-info style-center">
-                <b class="box-title">Interesting Facts</b>
+                <b class="box-title">CONTÁCTENOS</b>
                 <p class="txt-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the dummy text ever since the 1500s, when an unknown printer took a galley of type</p>
             </div>
 
@@ -27,21 +27,21 @@
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="aboutus-box-score equal-elem ">
                         <b class="box-score-title">10000</b>
-                        <span class="sub-title">Items in Store</span>
+                        <span class="sub-title">ARTÍCULOS EN LA TIENDA</span>
                         <p class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the dummy text ever since the 1500s...</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="aboutus-box-score equal-elem ">
                         <b class="box-score-title">90%</b>
-                        <span class="sub-title">Our Customers comeback</span>
+                        <span class="sub-title">VUELVEN NUESTROS CLIENTES</span>
                         <p class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the dummy text ever since the 1500s...</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="aboutus-box-score equal-elem ">
-                        <b class="box-score-title">2 million</b>
-                        <span class="sub-title">User of the site</span>
+                        <b class="box-score-title">2 millones</b>
+                        <span class="sub-title">USUARIO DEL SITIO</span>
                         <p class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the dummy text ever since the 1500s...</p>
                     </div>
                 </div>
@@ -51,53 +51,53 @@
 
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="aboutus-info style-small-left">
-                        <b class="box-title">What we really do?</b>
-                        <p class="txt-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,</p>
+                        <b class="box-title">¿QUÉ HACEMOS REALMENTE?</b>
+                        <p class="txt-content">Contrariamente a la creencia popular, Lorem Ipsum no es simplemente un texto aleatorio. Tiene sus raíces en una pieza de la literatura latina clásica del 45 a. C., por lo que tiene más de 2000 años. Richard McClintock,</p>
                     </div>
                     <div class="aboutus-info style-small-left">
-                        <b class="box-title">History of the Company</b>
-                        <p class="txt-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                    <div class="aboutus-info style-small-left">
-                        <b class="box-title">Our Vision</b>
-                        <p class="txt-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,</p>
-                    </div>
-                    <div class="aboutus-info style-small-left">
-                        <b class="box-title">Cooperate with Us!</b>
-                        <p class="txt-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,</p>
+                        <b class="box-title">HISTORIA DE LA EMPRESA</b>
+                        <p class="txt-content">Contrariamente a la creencia popular, Lorem Ipsum no es simplemente un texto aleatorio. Tiene sus raíces en una pieza de la literatura latina clásica del 45 a. C., por lo que tiene más de 2000 años. Richard McClintock,</p>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="aboutus-info style-small-left">
-                        <b class="box-title">Cooperate with Us!</b>
+                        <b class="box-title">NUESTRA VISIÓN</b>
+                        <p class="txt-content">Contrariamente a la creencia popular, Lorem Ipsum no es simplemente un texto aleatorio. Tiene sus raíces en una pieza de la literatura latina clásica del 45 a. C., por lo que tiene más de 2000 años. Richard McClintock,</p>
+                    </div>
+                    <div class="aboutus-info style-small-left">
+                        <b class="box-title">¡COOPERE CON NOSOTROS!</b>
+                        <p class="txt-content">Contrariamente a la creencia popular, Lorem Ipsum no es simplemente un texto aleatorio. Tiene sus raíces en una pieza de la literatura latina clásica del 45 a. C., por lo que tiene más de 2000 años. Richard McClintock,</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="aboutus-info style-small-left">
+                        <b class="box-title">¡COOPERE CON NOSOTROS!</b>
                         <div class="list-showups">
                             <label>
                                 <input type="radio" class="hidden" name="showup" id="shoup1" value="shoup1" checked="checked">
                                 <span class="check-box"></span>
-                                <span class='function-name'>Support 24/7</span>
-                                <span class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry...</span>
+                                <span class='function-name'>Soporte 24/7</span>
+                                <span class="desc">Lorem Ipsum es simplemente texto ficticio de la industria de la impresión y la composición tipográfica ...</span>
                             </label>
                             <label>
                                 <input type="radio" class="hidden" name="showup" id="shoup2" value="shoup2">
                                 <span class="check-box"></span>
-                                <span class='function-name'>Best Quanlity</span>
-                                <span class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry...</span>
+                                <span class='function-name'>Mejor Calidad</span>
+                                <span class="desc">Lorem Ipsum es simplemente texto ficticio de la industria de la impresión y la composición tipográfica ...</span>
                             </label>
                             <label>
                                 <input type="radio" class="hidden" name="showup" id="shoup3" value="shoup3">
                                 <span class="check-box"></span>
-                                <span class='function-name'>Fastest Delivery</span>
-                                <span class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry...</span>
+                                <span class='function-name'>ENTREGA MÁS RÁPIDA</span>
+                                <span class="desc">Lorem Ipsum es simplemente texto ficticio de la industria de la impresión y la composición tipográfica ...</span>
                             </label>
                             <label>
                                 <input type="radio" class="hidden" name="showup" id="shoup4" value="shoup4">
                                 <span class="check-box"></span>
-                                <span class='function-name'>Customer Care</span>
-                                <span class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry...</span>
+                                <span class='function-name'>ATENCIÓN AL CLIENTE</span>
+                                <span class="desc">Lorem Ipsum es simplemente texto ficticio de la industria de la impresión y la composición tipográfica ...</span>
                             </label>
                         </div>
                     </div>
@@ -105,7 +105,7 @@
             </div>
             
             <div class="our-team-info">
-                <h4 class="title-box">Our teams</h4>
+                <h4 class="title-box">NUESTROS EQUIPOS</h4>
                 <div class="our-staff">
                     
                     <div 
