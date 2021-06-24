@@ -100,14 +100,15 @@
                                 <a href="/" class="link-term mercado-item-title"><i class="fa fa-home"
                                         aria-hidden="true"></i></a>
                             </li>
-                            <li class="menu-item">
-                                <a href="/acerca" class="link-term mercado-item-title">Acerca de nosotros</a>
-                            </li>
+                            
                             <li class="menu-item">
                                 <a href="compras" class="link-term mercado-item-title">Productos</a>
                             </li>
                             <li class="menu-item">
-                                <a href="carrito" class="link-term mercado-item-title">Carrito</a>
+                                <a href="categorias" class="link-term mercado-item-title">Categorias</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="/acerca" class="link-term mercado-item-title">Acerca de nosotros</a>
                             </li>
                         </ul>
                     </div>
